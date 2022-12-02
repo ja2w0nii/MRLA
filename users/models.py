@@ -3,13 +3,12 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, nickname, password=None):
+    def create_user(self, email, password=None):
         if not email:
             raise ValueError("이메일을 작성해 주세요.")
 
         user = self.model(
             email=self.normalize_email(email),
-            nickname=nickname,
         )
 
         user.set_password(password)
@@ -46,9 +45,7 @@ class User(AbstractBaseUser):
     objects = UserManager()
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = [
-        "nickname",
-    ]
+    REQUIRED_FIELDS = []
 
     def __str__(self):
         return self.email

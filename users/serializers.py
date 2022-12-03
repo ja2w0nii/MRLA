@@ -1,31 +1,8 @@
+import re
 from rest_framework import serializers
 from users.models import User
 
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = "__all__"
-
-    def create(self, validated_data):
-        user = User(
-            email=validated_data["email"],
-        )
-        user.set_password(validated_data["password"])
-        user.is_active = True
-        user.save()
-        return user
-
-    def update(self, validated_data):
-        user = User(
-            email=validated_data["email"],
-        )
-        user.set_password(validated_data["password"])
-        user.save()
-        return user
-
-
-"""
 class UserSerializer(serializers.ModelSerializer):
     # 패스워드 확인은 serialization하지 않는다.
     password_check= serializers.CharField(error_messages={"write_only":True,'required':'비밀번호 확인까지 입력해 주세요.', 'blank':'비밀번호 확인까지 입력해 주세요.'}) 
@@ -76,6 +53,7 @@ class UserSerializer(serializers.ModelSerializer):
             password = password
             )
         user.set_password(password)
+        user.is_active = True
         user.save()
         return user
 
@@ -91,7 +69,6 @@ class UserSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
         return user
-"""
 
 
 class TokenObtainPairSerializer:
@@ -100,3 +77,15 @@ class TokenObtainPairSerializer:
         token = super().get_token(user)
         token["email"] = user.email
         return token
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("email", "profile_img", "nickname", "age", "gender")
+
+
+class ProfileUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("profile_img", "nickname", "age", "gender")

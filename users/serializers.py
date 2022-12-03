@@ -4,29 +4,6 @@ import re
 
 
 class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = "__all__"
-
-    def create(self, validated_data):
-        user = User(
-            email=validated_data["email"],
-        )
-        user.set_password(validated_data["password"])
-        user.is_active = True
-        user.save()
-        return user
-
-    def update(self, validated_data):
-        user = User(
-            email=validated_data["email"],
-        )
-        user.set_password(validated_data["password"])
-        user.save()
-        return user
-
-
-class UserSerializer(serializers.ModelSerializer):
     # 패스워드 확인은 serialization하지 않는다.
     password_check = serializers.CharField(error_messages={"write_only": True, "required": "비밀번호 확인까지 입력해 주세요.", "blank": "비밀번호 확인까지 입력해 주세요."})
 
@@ -42,8 +19,8 @@ class UserSerializer(serializers.ModelSerializer):
     def validate(self, validated_data):
         email = validated_data.get("email")
         email_reg = r"^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-        password_reg = r"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$"
         password = validated_data.get("password")
+        password_reg = r"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$"
         password_check = validated_data.get("password_check")
 
         # 이메일 유효성 체크
@@ -64,6 +41,7 @@ class UserSerializer(serializers.ModelSerializer):
         password = validated_data["password"]
         user = User(email=email, nickname=nickname, password=password)
         user.set_password(password)
+        user.is_active = True
         user.save()
         return user
 

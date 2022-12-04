@@ -6,7 +6,7 @@ from users.models import User
 from users.serializers import UserSerializer, ProfileSerializer, ProfileUpdateSerializer
 
 
-# 회원가입 API
+# 회원 가입/탈퇴
 class UserView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
@@ -21,8 +21,9 @@ class UserView(APIView):
         if user:
             user.delete()
             return Response({"message": "지금까지 저희 서비스를 이용해 주셔서 감사합니다."}, status=status.HTTP_200_OK)
-        return Response({"message": "이런... 탈퇴에 실패하셨습니다."}, status=status.HTTP_400_BAD_REQUEST)
-    
+        else:
+            return Response({"message": "이런... 탈퇴에 실패하셨습니다."}, status=status.HTTP_400_BAD_REQUEST)
+
 
 # 프로필 조회/수정
 class ProfileView(APIView):

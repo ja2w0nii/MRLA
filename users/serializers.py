@@ -3,8 +3,8 @@ from rest_framework import serializers
 from users.models import User
 
 
+# 회원 가입/수정(정규식 적용)
 class UserSerializer(serializers.ModelSerializer):
-    # 패스워드 확인은 serialization하지 않는다.
     password_check = serializers.CharField(error_messages={"write_only": True, "required": "비밀번호 확인까지 입력해 주세요.", "blank": "비밀번호 확인까지 입력해 주세요."})
 
     class Meta:
@@ -13,7 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "email": {"error_messages": {"required": "이메일을 입력해 주세요.", "blank": "이메일을 입력해 주세요."}},
             "nickname": {"error_messages": {"required": "닉네임을 입력해 주세요.", "blank": "닉네임을 입력해 주세요."}},
-            "password": {"write_only": True, "error_messages": {"required": "비밀번호를 입력해 주세요.", "blank": "비밀번호를 입력해 주세요."}},  # password도 직렬화하지 않는다.
+            "password": {"write_only": True, "error_messages": {"required": "비밀번호를 입력해 주세요.", "blank": "비밀번호를 입력해 주세요."}},
         }
 
     def validate(self, validated_data):
@@ -55,6 +55,7 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
+# 토큰 정보 커스텀
 class TokenObtainPairSerializer:
     @classmethod
     def get_token(cls, user):
@@ -63,12 +64,14 @@ class TokenObtainPairSerializer:
         return token
 
 
+# 프로필 조회
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ("email", "profile_img", "nickname", "age", "gender")
 
 
+# 프로필 수정
 class ProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User

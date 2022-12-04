@@ -16,14 +16,14 @@ class ServiceCreateSerializer(serializers.ModelSerializer):
         fields = ("title", "content")
 
 
-# # 고객센터 게시글 댓글 조회
+# 고객센터 게시글 댓글 조회
 class ServiceCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = ServiceComment
         fields = ("service", "comment", "created_at", "updated_at")
 
 
-# # 고객센터 게시글 댓글 등록
+# 고객센터 게시글 댓글 등록
 class ServiceCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = ServiceComment

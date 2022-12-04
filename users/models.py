@@ -37,10 +37,10 @@ class User(AbstractBaseUser):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    profile_img = models.ImageField(default="profile/default.jpeg", upload_to="profile", blank=True)
-    nickname = models.CharField(max_length=20, unique=True, error_messages={"unique": "이미 존재하는 닉네임입니다."})
-    age = models.IntegerField(verbose_name="나이", blank=True)
-    gender = models.BooleanField(verbose_name="성별", max_length=50, null=True)
+    profile_img = models.ImageField(verbose_name="프로필 사진", default="profile/default.jpeg", upload_to="profile")
+    nickname = models.CharField(verbose_name="닉네임", default="", max_length=20, unique=True, error_messages={"unique": "이미 존재하는 닉네임입니다."})
+    age = models.IntegerField(verbose_name="나이", null=True)
+    gender = models.BooleanField(verbose_name="성별", null=True)
 
     objects = UserManager()
 

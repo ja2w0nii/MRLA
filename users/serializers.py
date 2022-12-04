@@ -1,6 +1,6 @@
+import re
 from rest_framework import serializers
 from users.models import User
-import re
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -61,3 +61,15 @@ class TokenObtainPairSerializer:
         token = super().get_token(user)
         token["email"] = user.email
         return token
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("email", "profile_img", "nickname", "age", "gender")
+
+
+class ProfileUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("profile_img", "nickname", "age", "gender")

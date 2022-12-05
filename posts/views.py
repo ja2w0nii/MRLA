@@ -6,6 +6,9 @@ from posts.models import Service
 from posts.serializers import ServiceSerializer, ServiceCreateSerializer, ServiceCommentSerializer, ServiceCommentCreateSerializer
 
 
+
+
+
 # 고객센터 게시글 조회/등록
 class ServiceView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -47,3 +50,4 @@ class ServiceCommentView(APIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response({"message": "권한이 없습니다!"}, status=status.HTTP_401_UNAUTHORIZED)
+

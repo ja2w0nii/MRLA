@@ -132,3 +132,5 @@ class GoogleLogin(SocialLoginView):
     adapter_class = google_view.GoogleOAuth2Adapter
     callback_url = GOOGLE_CALLBACK_URI
     client_class = OAuth2Client
+
+    #git push용 

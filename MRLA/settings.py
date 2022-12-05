@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "users",
     "posts",
+    "foods",
 ]
 
 REST_FRAMEWORK = {

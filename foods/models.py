@@ -5,6 +5,7 @@ from users.models import User
 class Food(models.Model):
     class Meta:
         db_table = "food"
+
     food_id = models.IntegerField(primary_key=True, unique=True)
     menu = models.CharField(verbose_name="음식명", max_length=50)
     image = models.ImageField(verbose_name="음식 사진", blank=True)
@@ -23,10 +24,14 @@ class FoodLike(models.Model):
     food = models.ForeignKey(Food, verbose_name="음식명", on_delete=models.CASCADE)
     like = models.IntegerField(verbose_name="좋아요", default=True)
 
+    def __str__(self):
+        return str(f"{self.food} / {self.like}")
+
 
 class FoodComment(models.Model):
     class Meta:
         db_table = "food_comment"
+
     user = models.ForeignKey(User, verbose_name="작성자", on_delete=models.CASCADE, related_name="foodcomment_user")
     menu = models.ForeignKey(Food, verbose_name="음식명", on_delete=models.CASCADE, related_name="foodcomment_menu")
     comment = models.TextField(verbose_name="음식 댓글", max_length=500)
@@ -34,4 +39,4 @@ class FoodComment(models.Model):
     updated_at = models.DateTimeField(verbose_name="수정 시간", auto_now=True)
 
     def __str__(self):
-        return str(f'{self.user} / {self.menu} / {self.comment}')
+        return str(f"{self.user} / {self.menu} / {self.comment}")

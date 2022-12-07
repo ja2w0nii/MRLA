@@ -7,7 +7,7 @@ from foods.serializers import FoodSerializer, FilteringFoodSerializer
 from foods.collaborative_filtering import collaborative_filtering
 
 
-# 음식 리스트 조회
+# 메뉴 리스트 조회
 class FoodList(APIView):
     def get(self, request):
         foods = Food.objects.all()

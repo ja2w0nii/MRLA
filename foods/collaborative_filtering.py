@@ -6,12 +6,12 @@ def collaborative_filtering(id):
     likes = pd.read_csv('foods/likes.csv')
     foods = pd.read_csv('foods/foods.csv')
 
-    pd.set_option('display.max_columns', 10)
-    pd.set_option('display.width', 300)
+    pd.set_option("display.max_columns", 10)
+    pd.set_option("display.width", 300)
 
-    foods_likes = pd.merge(likes, foods, on='food_id')
+    foods_likes = pd.merge(likes, foods, on="food_id")
 
-    like_user = foods_likes.pivot_table('like', index=['user_id'], columns='food_id')
+    like_user = foods_likes.pivot_table("like", index=["user_id"], columns="food_id")
     like_user = like_user.fillna(0)
 
     user_based_collab = cosine_similarity(like_user, like_user)

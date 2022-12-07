@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "nickname", "password", "password_check")
+        fields = ("email", "nickname", "password", "password_check", "major_category")
         extra_kwargs = {
             "email": {"error_messages": {"required": "이메일을 입력해 주세요.", "blank": "이메일을 입력해 주세요."}},
             "nickname": {"error_messages": {"required": "닉네임을 입력해 주세요.", "blank": "닉네임을 입력해 주세요."}},
@@ -39,7 +39,8 @@ class UserSerializer(serializers.ModelSerializer):
         email = validated_data["email"]
         nickname = validated_data["nickname"]
         password = validated_data["password"]
-        user = User(email=email, nickname=nickname, password=password)
+        major_category = validated_data["major_category"]
+        user = User(email=email, nickname=nickname, password=password, major_category=major_category)
         user.set_password(password)
         user.is_active = True
         user.save()
@@ -49,7 +50,8 @@ class UserSerializer(serializers.ModelSerializer):
         email = validated_data["email"]
         nickname = validated_data["nickname"]
         password = validated_data["password"]
-        user = User(email=email, nickname=nickname, password=password)
+        major_category = validated_data["major_category"]
+        user = User(email=email, nickname=nickname, password=password, major_category=major_category)
         user.set_password(password)
         user.save()
         return user
@@ -76,3 +78,10 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ("profile_img", "nickname", "age", "gender")
+
+
+# 팔로잉/팔로워 리스트 조회
+class FollowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("following", "follower")

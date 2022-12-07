@@ -76,3 +76,10 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ("profile_img", "nickname", "age", "gender")
+
+
+# 팔로잉/팔로워 리스트 조회
+class FollowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("following", "follower")

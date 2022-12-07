@@ -6,6 +6,9 @@ from posts.models import Service, Community, CommunityComment
 from posts.serializers import ServiceSerializer, ServiceCreateSerializer, ServiceCommentSerializer, ServiceCommentCreateSerializer, CommunitySerializer, CommunityCreateSerializer, CommunityCommentSerializer, CommunityCommentCreateSerializer
 
 
+
+
+
 # 고객센터 게시글 조회/등록
 class ServiceView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -47,10 +50,6 @@ class ServiceCommentView(APIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response({"message": "권한이 없습니다!"}, status=status.HTTP_401_UNAUTHORIZED)
-
-
-
-
 
 
 # 커뮤니티 게시글 조회/등록
@@ -147,3 +146,4 @@ class CommunityCommentDetailView(APIView):
             return Response(status=status.HTTP_204_NO_CONTENT)
         else:
             return Response("권한이 없습니다", status = status.HTTP_403_FORBIDDEN)
+

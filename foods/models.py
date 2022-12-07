@@ -23,6 +23,9 @@ class FoodLike(models.Model):
     food = models.ForeignKey(Food, verbose_name="음식명", on_delete=models.CASCADE)
     like = models.IntegerField(verbose_name="좋아요", default=True)
 
+    def __str__(self):
+        return str(f'{self.food} / {self.like}')
+
 
 class FoodComment(models.Model):
     class Meta:

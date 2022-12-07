@@ -3,7 +3,13 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from posts.models import Service
-from posts.serializers import ServiceSerializer, ServiceCreateSerializer, ServiceCommentSerializer, ServiceCommentCreateSerializer
+from posts.serializers import (
+    ServiceSerializer,
+    ServiceCreateSerializer,
+    ServiceDetailSerializer,
+    ServiceCommentSerializer,
+    ServiceCommentCreateSerializer,
+)
 
 
 # 고객센터 게시글 조회/등록
@@ -24,7 +30,20 @@ class ServiceView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# 고객센터 게시글 댓글 조회/등록
+# 고객센터 게시글 디테일 조회
+class ServiceDetailtView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, service_id):
+        service = get_object_or_404(Service, id=service_id)
+        if request.user == service.user or request.user.is_admin:
+            serializer = ServiceDetailSerializer(service)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({"message": "권한이 없습니다!"}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+# 고객센터 게시글 디테일 댓글 조회/등록
 class ServiceCommentView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 

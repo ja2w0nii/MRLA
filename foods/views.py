@@ -7,10 +7,10 @@ from foods.serializers import FoodSerializer, FilteringFoodSerializer
 from foods.collaborative_filtering import collaborative_filtering
 
 
-# 메뉴 리스트 조회
+# 메뉴 리스트 조회 (좋아요 등록 많은 순서대로)
 class FoodList(APIView):
     def get(self, request):
-        foods = Food.objects.all()
+        foods = Food.objects.all().order_by("-likes")
         serializer = FoodSerializer(foods, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

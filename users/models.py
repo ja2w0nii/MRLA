@@ -42,6 +42,8 @@ class User(AbstractBaseUser):
     age = models.IntegerField(verbose_name="나이", null=True)
     gender = models.BooleanField(verbose_name="성별", null=True)
 
+    following = models.ManyToManyField('self', verbose_name="팔로잉", symmetrical=False, blank=True, related_name='follower')
+
     objects = UserManager()
 
     USERNAME_FIELD = "email"

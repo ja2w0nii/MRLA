@@ -42,3 +42,17 @@ class ProfileView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+
+# 팔로잉 등록/취소
+class FollowView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, user_id):
+        user = User.objects.get(id=user_id)
+        if request.user in user.follower.all():
+            user.follower.remove(request.user)
+            return Response("팔로우 취소", status=status.HTTP_200_OK)
+        else:
+            user.follower.add(request.user)
+            return Response("팔로우 완료", status=status.HTTP_200_OK)

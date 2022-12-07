@@ -2,6 +2,7 @@ from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
+from users.models import User
 from foods.models import Food
 from foods.serializers import FoodSerializer, FilteringFoodSerializer
 from foods.collaborative_filtering import collaborative_filtering
@@ -18,13 +19,12 @@ class FoodList(APIView):
 # 추천 음식 리스트 조회
 class FilteringFoodView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-    def get(self, request, food_id):
+    def get(self, request):
         food_list = []
         foods = collaborative_filtering(request.user.id)
-        like_food = get_object_or_404(Food, food_id=food_id)
         for food in foods:
             recommend_food = get_object_or_404(Food, food_id=food)
-            if recommend_food.major_category == like_food.major_category:
+            if recommend_food.major_category == request.user.major_category:
                 if len(food_list) < 5:
                     food_list.append(recommend_food)
                 else:

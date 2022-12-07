@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from posts.models import Service, ServiceComment
+from posts.models import Service, ServiceComment, Community, CommunityComment
 
 
 # 고객센터 게시글 조회
@@ -28,3 +28,57 @@ class ServiceCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = ServiceComment
         fields = ("comment",)
+
+
+
+# 커뮤니티 게시글 댓글 조회
+class CommunityCommentSerializer(serializers.ModelSerializer):
+    community_id = serializers.SerializerMethodField()
+    community_content = serializers.SerializerMethodField()
+    
+    def get_community_id(self, obj):
+        return obj.community.id
+    
+    def get_community_content(self, obj):
+        return obj.community.content
+
+    class Meta:
+        model = CommunityComment
+        fields = ("id","community_id", "community_content", "comment", "created_at", "updated_at")
+
+
+# 커뮤니티 게시글 조회
+class CommunitySerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Community
+        fields = '__all__'
+        
+# # 커뮤니티 게시글 조회
+# class CommunityListSerializer(serializers.ModelSerializer):
+#     user = serializers.SerializerMethodField()
+#     comment_set = serializers.SerializerMethodField()
+    
+#     def get_user(self, obj):
+#         return obj.user.email
+   
+#     def get_comment_set(self, obj):
+#         return obj.comment_set.count()
+    
+#     class Meta:
+#         model = Community
+#         fields = ("pk", "title", "image", "updated_at", "user", "comment_set")
+
+
+# 커뮤니티 게시글 등록
+class CommunityCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Community
+        fields = ("title", "content")
+
+
+# 커뮤니티 게시글 댓글 등록
+class CommunityCommentCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommunityComment
+        fields = ("comment", )

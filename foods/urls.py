@@ -4,11 +4,10 @@ from foods import views
 
 
 urlpatterns = [
-    path('', views.FoodList.as_view(), name="food_list"),
-    path('filtering/', views.FilteringFoodView.as_view(), name="filtering_food_view"),
-    # path('filtering/', views.FoodLikeView.as_view(), name="food_like_view"),
-    path('like/<int:food_id>/', views.LikeView.as_view(), name="like_view"),
     path("main/", views.FoodView.as_view(), name="food_view"),
-    path("main/<int:food_id>/", views.FoodCommentView.as_view(), name="food_comment_view"),
+    path("main/<int:food_id>/", views.FoodDetailView.as_view(), name="food_detail_view"),
+    path("main/<int:food_id>/comment/", views.FoodCommentView.as_view(), name="food_comment_view"),
     path("main/<int:food_id>/comment/<int:comment_id>/", views.FoodCommentView.as_view(), name="food_comment_view"),
+    path("main/<int:food_id>/like/", views.LikeView.as_view(), name="like_view"),
+    path("main/filtering/", views.FilteringFoodView.as_view(), name="filtering_food_view"),
 ]

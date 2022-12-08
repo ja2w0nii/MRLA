@@ -82,6 +82,9 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
 
 # 팔로잉/팔로워 리스트 조회
 class FollowSerializer(serializers.ModelSerializer):
+    following = serializers.StringRelatedField(many=True)
+    follower = serializers.StringRelatedField(many=True)
+    
     class Meta:
         model = User
         fields = ("following", "follower")

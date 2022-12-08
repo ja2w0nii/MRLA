@@ -8,14 +8,10 @@ class FoodSerializer(serializers.ModelSerializer):
 
     def get_likes(self, obj):
         return obj.likes.count()
-    
-
-class FoodSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Food
         fields = "__all__"
-
 
 
 # 추천 메뉴 리스트
@@ -24,11 +20,13 @@ class FilteringFoodSerializer(serializers.ModelSerializer):
         model = Food
         fields = ("food_id", "menu", "image")
 
+        
 class FoodCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodComment
-        fields = ("food", "comment", "created_at", "updated_at")
+        fields = ("menu", "comment", "created_at", "updated_at")
 
+        
 class FoodCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodComment

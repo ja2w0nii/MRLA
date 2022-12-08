@@ -21,6 +21,9 @@ class Food(models.Model):
 
 
 class FoodLike(models.Model):
+    class Meta:
+        db_table = "food_like"
+
     user = models.ForeignKey(User, verbose_name="좋아요 등록 유저", on_delete=models.CASCADE)
     food = models.ForeignKey(Food, verbose_name="음식명", on_delete=models.CASCADE)
     like = models.IntegerField(verbose_name="좋아요", default=True)
@@ -41,7 +44,7 @@ class FoodComment(models.Model):
 
     def __str__(self):
         return str(f"{self.user} / {self.menu} / {self.comment}")
-=======
+
 # 카테고리 추가될 가능성 있음
 class MainCategories(models.Model):
     main_category = models.CharField(max_length=20)

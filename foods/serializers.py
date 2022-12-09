@@ -18,7 +18,7 @@ class FoodSerializer(serializers.ModelSerializer):
 class FilteringFoodSerializer(serializers.ModelSerializer):
     class Meta:
         model = Food
-        fields = ("food_id", "menu", "image")
+        fields = ("food_id", "menu", "image", "major_category")
 
         
 class FoodCommentSerializer(serializers.ModelSerializer):

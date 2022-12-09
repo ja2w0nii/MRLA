@@ -9,4 +9,6 @@ urlpatterns = [
     path('community/<int:community_id>/',views.CommunityDetailView.as_view(), name='community_detail_view'),
     path('community/<int:community_id>/comment/',views.CommunityCommentView.as_view(), name='community_comment_view'),
     path('community/<int:community_id>/comment/<int:comment_id>/',views.CommunityCommentDetailView.as_view(), name='community_comment_Detail_view'),
+    path('community/<int:community_id>/like/',views.CommunityLikeView.as_view(), name='community_like_view'),
+    path('community/mycommunity/',views.MyCommunityLikeView.as_view(), name='my_community_like_view'),
 ]

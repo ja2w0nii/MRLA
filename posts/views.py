@@ -157,4 +157,27 @@ class CommunityCommentDetailView(APIView):
             return Response(status=status.HTTP_204_NO_CONTENT)
         else:
             return Response("권한이 없습니다", status = status.HTTP_403_FORBIDDEN)
+        
+
+# 커뮤니티 게시글 좋아요 등록/취소
+class CommunityLikeView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def post(self, request, community_id):
+        community = get_object_or_404(Community, id=community_id)
+        if request.user in community.likes.all():
+            community.likes.remove(request.user)
+            return Response("좋아요 취소", status=status.HTTP_200_OK)
+        else:
+            community.likes.add(request.user)
+            return Response("좋아요!", status=status.HTTP_200_OK)
+
+
+# 좋아요 등록한 메뉴 리스트 조회
+class MyCommunityLikeView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        user = request.user
+        community = user.community_likes.all()
+        serializer = CommunitySerializer(community, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 

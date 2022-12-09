@@ -10,4 +10,6 @@ urlpatterns = [
     path("main/<int:food_id>/comment/<int:comment_id>/", views.FoodCommentView.as_view(), name="food_comment_view"),
     path("main/<int:food_id>/like/", views.LikeView.as_view(), name="like_view"),
     path("main/filtering/", views.FilteringFoodView.as_view(), name="filtering_food_view"),
+
+    path("main/myfood/", views.MyFoodLikeView.as_view(), name="my_food_like_view"),
 ]

@@ -96,5 +96,16 @@ class LikeView(APIView):
             return Response("좋아요!", status=status.HTTP_200_OK)
 
 
+# 좋아요 등록한 메뉴 리스트 조회
+class MyFoodLikeView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        user = request.user
+        foods = user.food_likes.all()
+        serializer = FilteringFoodSerializer(foods, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+        
+
+
 
 

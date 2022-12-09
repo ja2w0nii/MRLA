@@ -61,9 +61,14 @@ class ProfileView(APIView):
 
         
 
-# 팔로잉 등록/취소
-class DoFollowView(APIView):
+# 팔로잉/팔로워 목록 조회 & 팔로우 등록/취소
+class FollowView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, user_id):
+        following = get_object_or_404(User, id=user_id)
+        serializer = FollowSerializer(following)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, user_id):
         user = get_object_or_404(User, id=user_id)
@@ -73,19 +78,6 @@ class DoFollowView(APIView):
         else:
             user.follower.add(request.user)
             return Response("팔로우 완료", status=status.HTTP_200_OK)
-        
-
-# 팔로잉/팔로워 리스트 보기
-class FollowView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request):
-        following = get_object_or_404(User, id=request.user.id)
-        serializer = FollowSerializer(following)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-    
-
-
 
 
 # state = os.environ.get("STATE")

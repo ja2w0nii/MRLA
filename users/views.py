@@ -74,10 +74,10 @@ class FollowView(APIView):
         user = get_object_or_404(User, id=user_id)
         if request.user in user.follower.all():
             user.follower.remove(request.user)
-            return Response("팔로우 취소", status=status.HTTP_200_OK)
+            return Response({"message":"팔로우 취소"}, status=status.HTTP_200_OK)
         else:
             user.follower.add(request.user)
-            return Response("팔로우 완료", status=status.HTTP_200_OK)
+            return Response({"message":"팔로우 완료"}, status=status.HTTP_200_OK)
 
 
 # state = os.environ.get("STATE")

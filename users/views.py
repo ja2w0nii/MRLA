@@ -39,6 +39,16 @@ class UserView(APIView):
             return Response({"message": "지금까지 저희 서비스를 이용해 주셔서 감사합니다."}, status=status.HTTP_200_OK)
         else:
             return Response({"message": "이런... 탈퇴에 실패하셨습니다."}, status=status.HTTP_400_BAD_REQUEST)
+        
+
+# 로그인한 유저의 프로필 정보 조회
+class MyProfileView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        profile = get_object_or_404(User, id=request.user.id)
+        serializer = ProfileSerializer(profile)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 # 프로필 조회/수정

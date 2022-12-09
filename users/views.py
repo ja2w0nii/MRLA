@@ -45,13 +45,13 @@ class UserView(APIView):
 class ProfileView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
-    def get(self, request):
-        profile = User.objects.get(id=request.user.id)
+    def get(self, request, user_id):
+        profile = get_object_or_404(User, id=user_id)
         serializer = ProfileSerializer(profile)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def put(self, request):
-        profile = User.objects.get(id=request.user.id)
+    def put(self, request, user_id):
+        profile = get_object_or_404(User, id=user_id)
         serializer = ProfileUpdateSerializer(profile, data=request.data)
         if serializer.is_valid():
             serializer.save()

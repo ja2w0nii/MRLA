@@ -68,9 +68,11 @@ class TokenObtainPairSerializer:
 
 # 프로필 조회
 class ProfileSerializer(serializers.ModelSerializer):
+    follower = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = User
-        fields = ("email", "profile_img", "nickname", "age", "gender")
+        fields = ("email", "profile_img", "nickname", "age", "gender", "follower")
 
 
 # 프로필 수정

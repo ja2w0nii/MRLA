@@ -13,6 +13,7 @@ class Food(models.Model):
     major_category = models.CharField(verbose_name="대분류", max_length=50)
     middle_category = models.CharField(verbose_name="중분류", max_length=50)
     minor_category = models.CharField(verbose_name="소분류", max_length=50)
+    target = models.CharField(verbose_name="같이 먹는 대상", max_length=50)
 
     likes = models.ManyToManyField(User, verbose_name="좋아요 음식", through="FoodLike", related_name="food_likes", blank=True)
 

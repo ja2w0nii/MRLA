@@ -3,33 +3,26 @@ from rest_framework.views import APIView
 from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
+from rest_framework_simplejwt.views import TokenObtainPairView
 from users.models import User
-from users.serializers import UserSerializer, ProfileSerializer, ProfileUpdateSerializer, FollowSerializer
-
+from users.serializers import CustomTokenObtainPairSerializer, UserSerializer, ProfileSerializer, ProfileUpdateSerializer, FollowSerializer
 import os
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView, 
-    TokenRefreshView
-)
-from django.shortcuts import redirect
 import requests
-from allauth.socialaccount.models import SocialAccount
+from json import JSONDecodeError
 from django.http import JsonResponse
+from django.shortcuts import redirect
+from dj_rest_auth.registration.views import SocialLoginView
+from allauth.socialaccount.models import SocialAccount
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from allauth.socialaccount.providers.google import views as google_view
 from allauth.socialaccount.providers.kakao import views as kakao_view
-from dj_rest_auth.registration.views import SocialLoginView
-from json import JSONDecodeError
-from users.serializers import UserSerializer
-from django.shortcuts import render
 from django.urls import reverse
 from allauth.account.views import PasswordChangeView
 from rest_framework.exceptions import NotFound
-from rest_framework.views import APIView
-from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from allauth.account.models import EmailConfirmation, EmailConfirmationHMAC
 from django.http import HttpResponseRedirect
+
 # 회원 가입/탈퇴
 class UserView(APIView):
     def post(self, request):
@@ -47,6 +40,10 @@ class UserView(APIView):
             return Response({"message": "지금까지 저희 서비스를 이용해 주셔서 감사합니다."}, status=status.HTTP_200_OK)
         else:
             return Response({"message": "이런... 탈퇴에 실패하셨습니다."}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer
 
 
 # 프로필 조회/수정
@@ -67,7 +64,6 @@ class ProfileView(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        
 
 # 팔로잉 등록/취소
 class DoFollowView(APIView):
@@ -81,7 +77,7 @@ class DoFollowView(APIView):
         else:
             user.follower.add(request.user)
             return Response("팔로우 완료", status=status.HTTP_200_OK)
-        
+
 
 # 팔로잉/팔로워 리스트 보기
 class FollowView(APIView):
@@ -91,10 +87,6 @@ class FollowView(APIView):
         following = get_object_or_404(User, id=request.user.id)
         serializer = FollowSerializer(following)
         return Response(serializer.data, status=status.HTTP_200_OK)
-    
-
-
-
 
 state = os.environ.get("STATE")
 
@@ -262,6 +254,5 @@ class KakaoLogin(SocialLoginView):
 def index(request):
     print(request.user.is_authenticated)
     return render(request, 'coplate/index.html')
-
 
 

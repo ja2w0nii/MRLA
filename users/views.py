@@ -205,7 +205,7 @@ class kakao_View(APIView):
             # 기존에 Google로 가입된 유저
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "{BASE_URL}users/kakao/login/finish/", data=data)
+                "http://127.0.0.1:5500/users/kakao/login/finish/", data=data)
             print(accept)
             accept_status = accept.status_code
             if accept_status != 200:
@@ -217,7 +217,7 @@ class kakao_View(APIView):
             # 기존에 가입된 유저가 없으면 새로 가입
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "{BASE_URL}users/kakao/login/finish/", data=data)
+                "http://127.0.0.1:5500/users/kakao/login/finish/", data=data)
             accept_status = accept.status_code
             if accept_status != 200:
                 return JsonResponse({'err_msg': 'failed to signup'}, status=accept_status)

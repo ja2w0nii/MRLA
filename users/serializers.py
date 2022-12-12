@@ -70,9 +70,11 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 # 프로필 조회
 class ProfileSerializer(serializers.ModelSerializer):
+    follower = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = User
-        fields = ("email", "profile_img", "nickname", "age", "gender")
+        fields = ("id", "email", "profile_img", "nickname", "age", "gender", "follower")
 
 
 # 프로필 수정
@@ -84,6 +86,9 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
 
 # 팔로잉/팔로워 리스트 조회
 class FollowSerializer(serializers.ModelSerializer):
+    following = serializers.StringRelatedField(many=True)
+    follower = serializers.StringRelatedField(many=True)
+    
     class Meta:
         model = User
         fields = ("following", "follower")

@@ -5,6 +5,14 @@ from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 from rest_framework_simplejwt.views import TokenObtainPairView
 from users.models import User
+from users.serializers import UserSerializer, ProfileSerializer, ProfileUpdateSerializer, FollowSerializer
+
+# import os
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView, 
+    TokenRefreshView
+)
+
 from users.serializers import CustomTokenObtainPairSerializer, UserSerializer, ProfileSerializer, ProfileUpdateSerializer, FollowSerializer
 import os
 import requests
@@ -23,6 +31,7 @@ from rest_framework.permissions import AllowAny
 from allauth.account.models import EmailConfirmation, EmailConfirmationHMAC
 from django.http import HttpResponseRedirect
 
+
 # 회원 가입/탈퇴
 class UserView(APIView):
     def post(self, request):
@@ -40,6 +49,16 @@ class UserView(APIView):
             return Response({"message": "지금까지 저희 서비스를 이용해 주셔서 감사합니다."}, status=status.HTTP_200_OK)
         else:
             return Response({"message": "이런... 탈퇴에 실패하셨습니다."}, status=status.HTTP_400_BAD_REQUEST)
+        
+
+# 로그인한 유저의 프로필 정보 조회
+class MyProfileView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        profile = get_object_or_404(User, id=request.user.id)
+        serializer = ProfileSerializer(profile)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class CustomTokenObtainPairView(TokenObtainPairView):
@@ -50,13 +69,13 @@ class CustomTokenObtainPairView(TokenObtainPairView):
 class ProfileView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
-    def get(self, request):
-        profile = User.objects.get(id=request.user.id)
+    def get(self, request, user_id):
+        profile = get_object_or_404(User, id=user_id)
         serializer = ProfileSerializer(profile)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def put(self, request):
-        profile = User.objects.get(id=request.user.id)
+    def put(self, request, user_id):
+        profile = get_object_or_404(User, id=user_id)
         serializer = ProfileUpdateSerializer(profile, data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -65,30 +84,36 @@ class ProfileView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# 팔로잉 등록/취소
-class DoFollowView(APIView):
+# 팔로잉/팔로워 목록 조회 & 팔로우 등록/취소
+class FollowView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, user_id):
+        following = get_object_or_404(User, id=user_id)
+        serializer = FollowSerializer(following)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, user_id):
         user = get_object_or_404(User, id=user_id)
         if request.user in user.follower.all():
             user.follower.remove(request.user)
-            return Response("팔로우 취소", status=status.HTTP_200_OK)
+            return Response({"message":"팔로우 취소"}, status=status.HTTP_200_OK)
         else:
             user.follower.add(request.user)
-            return Response("팔로우 완료", status=status.HTTP_200_OK)
+            return Response({"message":"팔로우 완료"}, status=status.HTTP_200_OK)
 
 
-# 팔로잉/팔로워 리스트 보기
-class FollowView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+# state = os.environ.get("STATE")
 
-    def get(self, request):
-        following = get_object_or_404(User, id=request.user.id)
-        serializer = FollowSerializer(following)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+# BASE_URL = 'http://localhost:8000/'
+# GOOGLE_CALLBACK_URI = BASE_URL + 'users/google/callback/'
 
-state = os.environ.get("STATE")
+
+# # 구글 로그인
+# def google_login(request):
+#     scope = "https://www.googleapis.com/auth/userinfo.email"
+#     client_id = os.environ.get("SOCIAL_AUTH_GOOGLE_CLIENT_ID")
+#     return redirect(f"https://accounts.google.com/o/oauth2/v2/auth?client_id={client_id}&response_type=code&redirect_uri={GOOGLE_CALLBACK_URI}&scope={scope}")
 
 # BASE_URL = 'http://127.0.0.1:5500/'
 # GOOGLE_CALLBACK_URI = BASE_URL + 'signlog.html'
@@ -165,6 +190,8 @@ state = os.environ.get("STATE")
 
 
 
+# BASE_URL = 'http://127.0.0.1:5500/'
+# KAKAO_CALLBACK_URI = BASE_URL + 'oauth/callback/kakao/'
 
 
 

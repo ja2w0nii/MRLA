@@ -28,9 +28,11 @@ class Community(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="community_user")
     title = models.CharField(verbose_name="커뮤니티 게시글 제목", max_length=50)
     content = models.TextField(verbose_name="커뮤니티 게시글 내용")
-    image = models.ImageField(verbose_name="커뮤니티 사진", default="profile/default.jpeg", upload_to="community", blank=True)
+    image = models.ImageField(verbose_name="커뮤니티 사진", upload_to="community")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    likes = models.ManyToManyField(User, verbose_name="좋아요 커뮤니티 게시글", related_name="community_likes", blank=True)
 
     def __str__(self):
         return str(f"{self.user} / {self.title}")

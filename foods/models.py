@@ -6,12 +6,13 @@ class Food(models.Model):
     class Meta:
         db_table = "food"
 
-    food_id = models.IntegerField(primary_key=True, unique=True, default="")
-    menu = models.CharField(verbose_name="음식명", max_length=50, default="")
-    image = models.ImageField(verbose_name="음식 사진", blank=True)
-    major_category = models.CharField(verbose_name="대분류", max_length=50, default="")
-    middle_category = models.CharField(verbose_name="중분류", max_length=50, default="")
-    minor_category = models.CharField(verbose_name="소분류", max_length=50, default="")
+    food_id = models.IntegerField(primary_key=True, unique=True)
+    menu = models.CharField(verbose_name="음식명", max_length=50)
+    image = models.URLField(verbose_name="음식 사진", max_length=500)
+    major_category = models.CharField(verbose_name="대분류", max_length=50)
+    middle_category = models.CharField(verbose_name="중분류", max_length=50)
+    minor_category = models.CharField(verbose_name="소분류", max_length=50)
+    target = models.CharField(verbose_name="같이 먹는 대상", max_length=50)
 
     likes = models.ManyToManyField(User, verbose_name="좋아요 음식", through="FoodLike", related_name="food_likes", blank=True)
 
@@ -20,6 +21,9 @@ class Food(models.Model):
 
 
 class FoodLike(models.Model):
+    class Meta:
+        db_table = "food_like"
+
     user = models.ForeignKey(User, verbose_name="좋아요 등록 유저", on_delete=models.CASCADE)
     food = models.ForeignKey(Food, verbose_name="음식명", on_delete=models.CASCADE)
     like = models.IntegerField(verbose_name="좋아요", default=True)

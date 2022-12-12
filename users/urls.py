@@ -6,6 +6,12 @@ from rest_framework_simplejwt.views import (
 )
 
 urlpatterns = [
+
+    path("signup/", views.UserView.as_view(), name="user_view"),
+    path("profile/", views.ProfileView.as_view(), name="profile_view"),
+    path("follow/<int:user_id>/", views.DoFollowView.as_view(), name="do_follow_view"),
+    path("follow/", views.FollowView.as_view(), name="follow_view"),
+
     path('kakao/login/', views.kakao_login, name='kakao_login'),
     path('kakao/callback/', views.kakao_View.as_view(), name='kakao_callback'),
     path('kakao/login/finish/', views.KakaoLogin.as_view(), name='kakao_login_todjango'),

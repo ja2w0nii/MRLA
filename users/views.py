@@ -4,7 +4,7 @@ from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 from users.models import User
-from users.serializers import UserSerializer, ProfileSerializer, ProfileUpdateSerializer
+from users.serializers import UserSerializer, ProfileSerializer, ProfileUpdateSerializer, FollowSerializer
 
 import os
 from rest_framework_simplejwt.views import (
@@ -66,6 +66,33 @@ class ProfileView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        
+
+# 팔로잉 등록/취소
+class DoFollowView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, user_id):
+        user = get_object_or_404(User, id=user_id)
+        if request.user in user.follower.all():
+            user.follower.remove(request.user)
+            return Response("팔로우 취소", status=status.HTTP_200_OK)
+        else:
+            user.follower.add(request.user)
+            return Response("팔로우 완료", status=status.HTTP_200_OK)
+        
+
+# 팔로잉/팔로워 리스트 보기
+class FollowView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        following = get_object_or_404(User, id=request.user.id)
+        serializer = FollowSerializer(following)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
 
 
 

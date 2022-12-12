@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.kakao',
     'rest_framework.authtoken',
+    "foods",
 ]
 
 REST_FRAMEWORK = {

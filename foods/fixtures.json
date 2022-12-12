@@ -3,10 +3,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 1,
-      "menu": "제육덮밥",
+      "menu": "제육볶음",
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2319869_1638845701_menu.jpg",
       "target": "직장동료"
     }
   },
@@ -18,6 +19,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1938324_1638842372_menu.jpg",
       "target": "친구"
     }
   },
@@ -29,6 +31,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1500544_1638842982_menu.png",
       "target": "직장동료"
     }
   },
@@ -40,6 +43,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1500433_1638842984_menu.png",
       "target": "혼밥"
     }
   },
@@ -51,6 +55,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2513089_1638845629_menu.png",
       "target": "친구"
     }
   },
@@ -62,6 +67,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2231734_1638845630_menu.jpg",
       "target": "친구"
     }
   },
@@ -73,6 +79,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2780042_1638845103_menu.png",
       "target": "친구"
     }
   },
@@ -84,6 +91,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2524118_1638843273_menu.jpg",
       "target": "가족"
     }
   },
@@ -95,6 +103,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/122316_1638845703_menu.png",
       "target": "친구"
     }
   },
@@ -106,6 +115,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1052540_1638843636_menu.png",
       "target": "직장동료"
     }
   },
@@ -117,6 +127,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1293562_1638845402_menu.jpg",
       "target": "직장동료"
     }
   },
@@ -128,6 +139,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2977325_1638844274_menu.png",
       "target": "직장동료"
     }
   },
@@ -139,6 +151,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1050131_1638843227_menu.png",
       "target": "직장동료"
     }
   },
@@ -150,6 +163,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2694920_1638843843_menu.png",
       "target": "직장동료"
     }
   },
@@ -161,6 +175,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2300241_1638842668_menu.png",
       "target": "가족"
     }
   },
@@ -172,6 +187,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2977477_1638844275_menu.png",
       "target": "가족"
     }
   },
@@ -183,6 +199,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2694922_1638843844_menu.png",
       "target": "가족"
     }
   },
@@ -194,6 +211,7 @@
       "major_category": "한식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1191512_1638845598_menu.jpg",
       "target": "직장동료"
     }
   },
@@ -205,6 +223,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2528323_1638845697_menu.jpg",
       "target": "친구"
     }
   },
@@ -216,6 +235,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2694934_1638843844_menu.png",
       "target": "가족"
     }
   },
@@ -227,6 +247,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://cdn.mkhealth.co.kr/news/photo/202001/img_MKH200108002_0.jpg",
       "target": "가족"
     }
   },
@@ -238,6 +259,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://beatmarket.speedgabia.com/godo/goods/re/3352428/MC1126_0380_re.jpg",
       "target": "가족"
     }
   },
@@ -249,6 +271,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1293562_1638845402_menu.jpg",
       "target": "직장동료"
     }
   },
@@ -260,6 +283,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/587941_1638842374_menu.jpg",
       "target": "직장동료"
     }
   },
@@ -271,6 +295,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1725504_1638844034_menu.jpg",
       "target": "직장동료"
     }
   },
@@ -282,6 +307,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2394158_1638844842_menu.png",
       "target": "직장동료"
     }
   },
@@ -293,6 +319,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://minio.nculture.org/amsweb-opt/multimedia_assets/186/25829/10722/c/25829-medium-size.jpg",
       "target": "직장동료"
     }
   },
@@ -304,6 +331,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1050128_1638843226_menu.png",
       "target": "직장동료"
     }
   },
@@ -315,6 +343,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/616023_1638843272_menu.png",
       "target": "직장동료"
     }
   },
@@ -326,6 +355,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2291641_1638845700_menu.PNG",
       "target": "가족"
     }
   },
@@ -337,6 +367,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://mp-seoul-image-production-s3.mangoplate.com/2093117_1639830357715192.jpg?fit=around|738:738&crop=738:738;*,*&output-format=jpg&output-quality=80",
       "target": "직장동료"
     }
   },
@@ -348,6 +379,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "http://img3.tmon.kr/cdn3/deals/2020/12/07/4911006262/4911006262_front_b5ef6b3180.jpg",
       "target": "직장동료"
     }
   },
@@ -359,6 +391,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://doewxs707ovkc.cloudfront.net/v3/prod/image/item/mainpage/944/24b28532dabf46dab581ed55406340ba20220413202437.",
       "target": "가족"
     }
   },
@@ -370,6 +403,7 @@
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2146605_1638843928_menu.png",
       "target": "가족"
     }
   },
@@ -381,6 +415,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1582710_1638842371_menu.png",
       "target": "직장동료"
     }
   },
@@ -392,6 +427,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2117005_1638844130_menu.png",
       "target": "혼밥"
     }
   },
@@ -403,6 +439,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1050125_1638843226_menu.png",
       "target": "직장동료"
     }
   },
@@ -414,6 +451,7 @@
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "http://www.fsnews.co.kr/news/photo/202006/38484_32172_511.jpg",
       "target": "가족"
     }
   },
@@ -425,6 +463,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/122281_1638845476_menu.jpg",
       "target": "가족"
     }
   },
@@ -436,6 +475,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1050426_1638843227_menu.png",
       "target": "가족"
     }
   },
@@ -447,6 +487,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1733764_1638844343_menu.png",
       "target": "친구"
     }
   },
@@ -458,6 +499,7 @@
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1733976_1638844343_menu.png",
       "target": "친구"
     }
   },
@@ -469,6 +511,7 @@
       "major_category": "일식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://w.namu.la/s/7f61986acda03b72f2f89edc221b839503133a69bab477d165ff61ccb6b586ff5ab7c4fa7c3905b6156b060fa49deabfef5920a32c37596eeb3f4368f992065cb08a358860319134780683b344f9b517b62b36cd97dc2c9aa0dc6be6c41b4b6ea1e9879e4200c156aede84fccb8f165d",
       "target": "친구"
     }
   },
@@ -476,10 +519,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 44,
-      "menu": "매운탕",
+      "menu": "해물탕",
       "major_category": "한식",
       "middle_category": "국(탕)",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2292114_1638845054_menu.png",
       "target": "가족"
     }
   },
@@ -487,21 +531,23 @@
     "model": "foods.food",
     "fields": {
       "food_id": 45,
-      "menu": "해물탕",
+      "menu": "뼈해장국",
       "major_category": "한식",
       "middle_category": "국(탕)",
-      "minor_category": "요리",
-      "target": "가족"
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/607814_1638844559_menu.png",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 46,
-      "menu": "뼈해장국",
+      "menu": "오리주물럭",
       "major_category": "한식",
-      "middle_category": "국(탕)",
-      "minor_category": "식사",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2301047_1638842682_menu.png",
       "target": "친구"
     }
   },
@@ -509,32 +555,35 @@
     "model": "foods.food",
     "fields": {
       "food_id": 47,
-      "menu": "오리주물럭",
-      "major_category": "한식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 48,
       "menu": "돼지두루치기",
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2702604_1638843698_menu.png",
       "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 49,
+      "food_id": 48,
       "menu": "낙곱새",
       "major_category": "야식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://static.wtable.co.kr/image-resize/production/service/recipe/644/4x3/12827380-2e03-4abd-b75c-6493029c4d0f.jpg",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 49,
+      "menu": "닭갈비",
+      "major_category": "한식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/123436_1638845362_menu.jpg",
       "target": "친구"
     }
   },
@@ -542,65 +591,71 @@
     "model": "foods.food",
     "fields": {
       "food_id": 50,
-      "menu": "찜닭",
-      "major_category": "한식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 51,
-      "menu": "닭갈비",
-      "major_category": "한식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 52,
-      "menu": "오돌뼈",
-      "major_category": "야식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 53,
       "menu": "오삼불고기",
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2701037_1638843360_menu.png",
       "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 54,
-      "menu": "콩나물불고기",
+      "food_id": 51,
+      "menu": "꼬막무침",
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2708769_1638842666_menu.PNG",
+      "target": "가족"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 52,
+      "menu": "갈비찜",
+      "major_category": "한식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://cdn.mkhealth.co.kr/news/photo/202001/img_MKH200121002_0.jpg",
+      "target": "가족"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 53,
+      "menu": "곱(막)창",
+      "major_category": "한식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2528322_1638845697_menu.jpg",
       "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 55,
-      "menu": "갈비찜",
+      "food_id": 54,
+      "menu": "갈비",
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1288869_1638845708_menu.jpg",
+      "target": "가족"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 55,
+      "menu": "고등어구이",
+      "major_category": "한식",
+      "middle_category": "생선구이",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2702605_1638843698_menu.png",
       "target": "가족"
     }
   },
@@ -608,21 +663,23 @@
     "model": "foods.food",
     "fields": {
       "food_id": 56,
-      "menu": "곱(막)창",
+      "menu": "갈치구이",
       "major_category": "한식",
-      "middle_category": "고기",
+      "middle_category": "생선구이",
       "minor_category": "요리",
-      "target": "친구"
+      "image": "https://image.board.sbs.co.kr/2021/08/20/2I31629416752099.jpg",
+      "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 57,
-      "menu": "갈비",
+      "menu": "조기구이",
       "major_category": "한식",
-      "middle_category": "고기",
+      "middle_category": "생선구이",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1046100_1638843361_menu.png",
       "target": "가족"
     }
   },
@@ -630,10 +687,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 58,
-      "menu": "고등어구이",
+      "menu": "삼치구이",
       "major_category": "한식",
       "middle_category": "생선구이",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2708775_1638842666_menu.PNG",
       "target": "가족"
     }
   },
@@ -641,10 +699,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 59,
-      "menu": "갈치구이",
+      "menu": "장어구이",
       "major_category": "한식",
       "middle_category": "생선구이",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/894279_1638843274_menu.png",
       "target": "가족"
     }
   },
@@ -652,252 +711,275 @@
     "model": "foods.food",
     "fields": {
       "food_id": 60,
-      "menu": "조기구이",
+      "menu": "육회비빔밥",
       "major_category": "한식",
-      "middle_category": "생선구이",
-      "minor_category": "요리",
-      "target": "가족"
+      "middle_category": "밥",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2146606_1638843928_menu.png",
+      "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 61,
-      "menu": "삼치구이",
-      "major_category": "한식",
-      "middle_category": "생선구이",
-      "minor_category": "요리",
-      "target": "가족"
+      "menu": "라면",
+      "major_category": "분식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/123517_1638845141_menu.png",
+      "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 62,
-      "menu": "장어구이",
-      "major_category": "한식",
-      "middle_category": "생선구이",
-      "minor_category": "요리",
-      "target": "가족"
+      "menu": "우동",
+      "major_category": "분식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1682369_1638845261_menu.png",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 63,
-      "menu": "육회비빔밥",
-      "major_category": "한식",
-      "middle_category": "밥",
-      "minor_category": "식사",
-      "target": "혼밥"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 64,
-      "menu": "라면",
-      "major_category": "분식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "혼밥"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 65,
-      "menu": "우동",
-      "major_category": "분식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 66,
       "menu": "냉면",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1717270_1638842374_menu.JPG",
       "target": "직장동료"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 67,
+      "food_id": 64,
       "menu": "칼국수",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2333865_1638844792_menu.png",
       "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 65,
+      "menu": "짜장라면",
+      "major_category": "분식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Nongshim_Chapagetti_20201120_003.jpg",
+      "target": "혼밥"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 66,
+      "menu": "비빔국수",
+      "major_category": "한식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bibim-guksu.jpg/2560px-Bibim-guksu.jpg",
+      "target": "혼밥"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 67,
+      "menu": "잔치국수",
+      "major_category": "한식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://static.wtable.co.kr/image/production/service/recipe/438/ed2bf141-5342-4804-ac34-6a30fb525b01.jpg?size=1024x576",
+      "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 68,
-      "menu": "짜장라면",
-      "major_category": "분식",
+      "menu": "막국수",
+      "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
-      "target": "혼밥"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2668160_1638845696_menu.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 69,
-      "menu": "비빔국수",
+      "menu": "콩국수",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
-      "target": "혼밥"
+      "image": "https://m.cj.co.kr/images/theKitchen/PHON/0000002429/0000010548/0000002429.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 70,
-      "menu": "잔치국수",
+      "menu": "밀면",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
-      "target": "혼밥"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSti9_6Mr6ymIJuwGoBVvcE0cscAp38gLcn8u0_XPEmeOsApUy1uuuq7X1vLbauVf8Zcsk&usqp=CAU",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 71,
-      "menu": "막국수",
+      "menu": "떡국",
       "major_category": "한식",
-      "middle_category": "면",
+      "middle_category": "국(탕)",
       "minor_category": "식사",
-      "target": "친구"
+      "image": "https://folkency.nfm.go.kr/upload2/img/20161226/2016122300000417_t.jpg",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 72,
-      "menu": "콩국수",
+      "menu": "수제비",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
-      "target": "친구"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1682337_1638845259_menu.png",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 73,
-      "menu": "밀면",
+      "menu": "고기국수",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
-      "target": "연인"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2293602_1638845529_menu.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 74,
-      "menu": "떡국",
-      "major_category": "한식",
-      "middle_category": "국(탕)",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 75,
-      "menu": "수제비",
-      "major_category": "한식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 76,
-      "menu": "고기국수",
-      "major_category": "한식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 77,
       "menu": "김치말이국수",
       "major_category": "한식",
       "middle_category": "면",
       "minor_category": "식사",
+      "image": "http://storage.enuri.info/pic_upload/knowbox2/202104/12134564220210422134d2b63-52a3-489f-8a63-87b7653b9e09.jpg",
       "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 78,
+      "food_id": 75,
       "menu": "쫄면",
       "major_category": "분식",
       "middle_category": "면",
       "minor_category": "식사",
+      "image": "https://w.namu.la/s/f46ed414aa55aef4c4de2a3947c6ef8181815a73f8ae08441b915c88b3ece67e159724d8b0fe3d13a8bb7e11704237680ae9e6f52a403cdfe109a6096ed925fa39368f7cd89867144217c785e26d00bfa513cd9cebf88a0937ac1676cea0a399",
       "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 79,
+      "food_id": 76,
       "menu": "떡볶이",
       "major_category": "분식",
       "middle_category": "떡",
       "minor_category": "간식",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1682414_1638845263_menu.png",
       "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 80,
+      "food_id": 77,
       "menu": "핫도그",
       "major_category": "분식",
       "middle_category": "빵",
       "minor_category": "간식",
+      "image": "http://cdn.iconsumer.or.kr/news/photo/202110/21844_24989_154.jpg",
       "target": "혼밥"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 78,
+      "menu": "김밥",
+      "major_category": "분식",
+      "middle_category": "밥",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1682319_1638845259_menu.png",
+      "target": "혼밥"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 79,
+      "menu": "순대",
+      "major_category": "분식",
+      "middle_category": "고기",
+      "minor_category": "간식",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/614227_1638843255_menu.png",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 80,
+      "menu": "돈까스",
+      "major_category": "분식",
+      "middle_category": "고기",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/121749_1638845476_menu.png",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 81,
-      "menu": "김밥",
+      "menu": "튀김",
       "major_category": "분식",
-      "middle_category": "밥",
-      "minor_category": "식사",
-      "target": "혼밥"
+      "middle_category": "튀김",
+      "minor_category": "요리",
+      "image": "https://wimg.mk.co.kr/meet/neds/2021/10/image_readtop_2021_948489_16335092754806765.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 82,
-      "menu": "순대",
+      "menu": "어묵",
       "major_category": "분식",
-      "middle_category": "고기",
+      "middle_category": "어묵",
       "minor_category": "간식",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2434335_1638845105_menu.png",
       "target": "친구"
     }
   },
@@ -905,21 +987,23 @@
     "model": "foods.food",
     "fields": {
       "food_id": 83,
-      "menu": "돈까스",
+      "menu": "라볶이",
       "major_category": "분식",
-      "middle_category": "고기",
+      "middle_category": "면",
       "minor_category": "식사",
-      "target": "연인"
+      "image": "https://image.msscdn.net/mfile_s01/2022/10/06/d1b4c2f735ae8ac0fa9691697b74e73b105452.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 84,
-      "menu": "튀김",
+      "menu": "만두",
       "major_category": "분식",
-      "middle_category": "튀김",
-      "minor_category": "요리",
+      "middle_category": "고기",
+      "minor_category": "간식",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/122570_1638845051_menu.png",
       "target": "친구"
     }
   },
@@ -927,43 +1011,47 @@
     "model": "foods.food",
     "fields": {
       "food_id": 85,
-      "menu": "어묵",
-      "major_category": "분식",
-      "middle_category": "어묵",
-      "minor_category": "간식",
-      "target": "친구"
+      "menu": "라멘",
+      "major_category": "일식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2326069_1638845700_menu.jpg",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 86,
-      "menu": "라볶이",
-      "major_category": "분식",
-      "middle_category": "면",
+      "menu": "가츠동",
+      "major_category": "일식",
+      "middle_category": "밥",
       "minor_category": "식사",
-      "target": "친구"
+      "image": "https://w.namu.la/s/d57991f21eba6b35e07f05f112fde972cdd5b4950dd6ed829644e0f92e06ee3ca12fb6e78d73df8d2b27b38dd01ef822ceb692f380b73ee6b91849e06456688e9aeba5f910a45975324a86a3d0e8f3b25626906e5ccf2ebcf4d79017ee995fb3",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 87,
-      "menu": "만두",
-      "major_category": "분식",
-      "middle_category": "고기",
-      "minor_category": "간식",
-      "target": "친구"
+      "menu": "오코노미야끼",
+      "major_category": "일식",
+      "middle_category": "전",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2647241_1638845712_menu.jpg",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 88,
-      "menu": "라멘",
+      "menu": "초밥",
       "major_category": "일식",
-      "middle_category": "면",
+      "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/123879_1638845059_menu.png",
       "target": "연인"
     }
   },
@@ -971,10 +1059,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 89,
-      "menu": "가츠동",
+      "menu": "규동",
       "major_category": "일식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gyuu-don_003.jpg",
       "target": "연인"
     }
   },
@@ -982,10 +1071,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 90,
-      "menu": "오코노미야끼",
+      "menu": "소바",
       "major_category": "일식",
-      "middle_category": "전",
-      "minor_category": "요리",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1682347_1638845259_menu.png",
       "target": "연인"
     }
   },
@@ -993,10 +1083,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 91,
-      "menu": "초밥",
+      "menu": "회덮밥",
       "major_category": "일식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2225234_1638844695_menu.jpg",
       "target": "연인"
     }
   },
@@ -1004,65 +1095,71 @@
     "model": "foods.food",
     "fields": {
       "food_id": 92,
-      "menu": "규동",
-      "major_category": "일식",
-      "middle_category": "밥",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 93,
-      "menu": "소바",
-      "major_category": "일식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 94,
-      "menu": "회덮밥",
-      "major_category": "일식",
-      "middle_category": "밥",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 95,
       "menu": "나베",
       "major_category": "일식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1599944_1638844131_menu.png",
       "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 96,
+      "food_id": 93,
       "menu": "짜장면",
       "major_category": "중식",
       "middle_category": "면",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/602824_1638844802_menu.png",
       "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 97,
+      "food_id": 94,
       "menu": "짬뽕",
       "major_category": "중식",
       "middle_category": "면",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/602826_1638844802_menu.png",
+      "target": "직장동료"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 95,
+      "menu": "볶음밥",
+      "major_category": "중식",
+      "middle_category": "밥",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1794289_1638843796_menu.png",
+      "target": "혼밥"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 96,
+      "menu": "탕수육",
+      "major_category": "중식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2511787_1638845712_menu.png",
+      "target": "직장동료"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 97,
+      "menu": "마파두부",
+      "major_category": "중식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1794041_1638843795_menu.png",
       "target": "직장동료"
     }
   },
@@ -1070,21 +1167,23 @@
     "model": "foods.food",
     "fields": {
       "food_id": 98,
-      "menu": "볶음밥",
+      "menu": "깐풍기",
       "major_category": "중식",
-      "middle_category": "밥",
-      "minor_category": "식사",
-      "target": "혼밥"
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/619428_1638844803_menu.png",
+      "target": "직장동료"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 99,
-      "menu": "탕수육",
+      "menu": "고추잡채",
       "major_category": "중식",
-      "middle_category": "고기",
+      "middle_category": "면",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2541620_1638845362_menu.png",
       "target": "직장동료"
     }
   },
@@ -1092,10 +1191,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 100,
-      "menu": "마파두부",
+      "menu": "팔보채",
       "major_category": "중식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1794257_1638843795_menu.png",
       "target": "직장동료"
     }
   },
@@ -1103,65 +1203,71 @@
     "model": "foods.food",
     "fields": {
       "food_id": 101,
-      "menu": "깐풍기",
+      "menu": "꿔바로우",
       "major_category": "중식",
       "middle_category": "고기",
       "minor_category": "요리",
-      "target": "직장동료"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2484315_1638845714_menu.PNG",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 102,
-      "menu": "고추잡채",
+      "menu": "동파육",
       "major_category": "중식",
-      "middle_category": "면",
+      "middle_category": "고기",
       "minor_category": "요리",
-      "target": "직장동료"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1793513_1638843795_menu.png",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 103,
-      "menu": "팔보채",
+      "menu": "마라탕",
       "major_category": "중식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "직장동료"
+      "middle_category": "국(탕)",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2484313_1638845714_menu.PNG",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 104,
-      "menu": "꿔바로우",
+      "menu": "마라샹궈",
       "major_category": "중식",
-      "middle_category": "고기",
+      "middle_category": "볶음",
       "minor_category": "요리",
-      "target": "연인"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/121885_1638845659_menu.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 105,
-      "menu": "멘보샤",
+      "menu": "유산슬",
       "major_category": "중식",
-      "middle_category": "빵",
+      "middle_category": "볶음",
       "minor_category": "요리",
-      "target": "연인"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1845469_1638842681_menu.png",
+      "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 106,
-      "menu": "마라탕",
-      "major_category": "중식",
-      "middle_category": "국(탕)",
+      "menu": "해물스파게티",
+      "major_category": "양식",
+      "middle_category": "면",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/124001_1638845662_menu.png",
       "target": "연인"
     }
   },
@@ -1169,76 +1275,83 @@
     "model": "foods.food",
     "fields": {
       "food_id": 107,
-      "menu": "마라샹궈",
-      "major_category": "중식",
-      "middle_category": "볶음",
-      "minor_category": "요리",
-      "target": "친구"
+      "menu": "파스타",
+      "major_category": "양식",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2780040_1638845103_menu.png",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 108,
-      "menu": "깐쇼새우",
-      "major_category": "중식",
-      "middle_category": "볶음",
+      "menu": "스테이크",
+      "major_category": "양식",
+      "middle_category": "고기",
       "minor_category": "요리",
-      "target": "가족"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1759263_1638844788_menu.png",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 109,
-      "menu": "스파게티",
-      "major_category": "양식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 110,
-      "menu": "파스타",
-      "major_category": "양식",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 111,
-      "menu": "스테이크",
-      "major_category": "양식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 112,
       "menu": "햄버거",
       "major_category": "양식",
       "middle_category": "빵",
       "minor_category": "간식",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2627280_1638842665_menu.png",
       "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 113,
+      "food_id": 110,
       "menu": "치킨",
       "major_category": "야식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/122949_1638845705_menu.PNG",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 111,
+      "menu": "족발",
+      "major_category": "야식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2295137_1638842500_menu.png",
+      "target": "직장동료"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 112,
+      "menu": "보쌈",
+      "major_category": "야식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2567425_1638844081_menu.png",
+      "target": "직장동료"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 113,
+      "menu": "피자",
+      "major_category": "양식",
+      "middle_category": "빵",
+      "minor_category": "요리",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Supreme_pizza.jpg/800px-Supreme_pizza.jpg",
       "target": "친구"
     }
   },
@@ -1246,98 +1359,107 @@
     "model": "foods.food",
     "fields": {
       "food_id": 114,
-      "menu": "족발",
+      "menu": "닭발",
       "major_category": "야식",
       "middle_category": "고기",
       "minor_category": "요리",
-      "target": "직장동료"
+      "image": "https://w.namu.la/s/e04a85bdeedd4e8f0f45444c7853eba7125039de4d5058174d8eaf2f3f36276d0123b386777c258c684318361099626a24f6af661bd2bbbb48140f07840d7aff94fe0edd7c206ccafa8087b2573ae49c8b14eba6ca2f3eaf5257cb449a25345a",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 115,
-      "menu": "보쌈",
+      "menu": "골뱅이 무침",
       "major_category": "야식",
-      "middle_category": "고기",
+      "middle_category": "면",
       "minor_category": "요리",
-      "target": "직장동료"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2366755_1638845689_menu.jpg",
+      "target": "친구"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 116,
-      "menu": "피자",
-      "major_category": "양식",
-      "middle_category": "빵",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 117,
-      "menu": "닭발",
-      "major_category": "야식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 118,
-      "menu": "골뱅이 무침",
-      "major_category": "야식",
-      "middle_category": "면",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 119,
       "menu": "삼겹살",
       "major_category": "한식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1964772_1638844080_menu.png",
       "target": "직장동료"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 120,
+      "food_id": 117,
       "menu": "어묵탕",
       "major_category": "야식",
       "middle_category": "국(탕)",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2647236_1638845712_menu.jpg",
       "target": "연인"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 118,
+      "menu": "육회",
+      "major_category": "야식",
+      "middle_category": "회",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/122228_1638845169_menu.png",
+      "target": "연인"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 119,
+      "menu": "해물찜",
+      "major_category": "한식",
+      "middle_category": "찜",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2568142_1638844559_menu.png",
+      "target": "가족"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 120,
+      "menu": "아구찜",
+      "major_category": "한식",
+      "middle_category": "찜",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1725508_1638844035_menu.jpg",
+      "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 121,
-      "menu": "육회",
-      "major_category": "야식",
-      "middle_category": "회",
-      "minor_category": "요리",
-      "target": "연인"
+      "menu": "꽃게찜",
+      "major_category": "한식",
+      "middle_category": "찜",
+      "minor_category": "식사",
+      "image": "http://shop.biumfood.com/upload/1633086465image_product064.jpg",
+      "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 122,
-      "menu": "해물찜",
+      "menu": "대게찜",
       "major_category": "한식",
       "middle_category": "찜",
       "minor_category": "요리",
+      "image": "https://www.gb.go.kr/Main/data/food/S_212_me1.jpg",
       "target": "가족"
     }
   },
@@ -1345,120 +1467,131 @@
     "model": "foods.food",
     "fields": {
       "food_id": 123,
-      "menu": "아구찜",
-      "major_category": "한식",
-      "middle_category": "찜",
+      "menu": "연어스테이크",
+      "major_category": "양식",
+      "middle_category": "생선구이",
       "minor_category": "요리",
-      "target": "가족"
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/1759504_1638844789_menu.png",
+      "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 124,
-      "menu": "꽃게찜",
-      "major_category": "한식",
-      "middle_category": "찜",
-      "minor_category": "요리",
-      "target": "가족"
+      "menu": "토스트",
+      "major_category": "분식",
+      "middle_category": "빵",
+      "minor_category": "간식",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2831651_1638845705_menu.jpg",
+      "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 125,
-      "menu": "대게찜",
-      "major_category": "한식",
-      "middle_category": "찜",
-      "minor_category": "요리",
-      "target": "가족"
+      "menu": "샌드위치",
+      "major_category": "분식",
+      "middle_category": "빵",
+      "minor_category": "간식",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7I4X3rJ7snn42_axzDqLgjUm9U_vacVjYjJVpSEtWEGec2nMfwo4hk4WMd0Hm8t_794&usqp=CAU",
+      "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
       "food_id": 126,
-      "menu": "폭립",
-      "major_category": "양식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "연인"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 127,
-      "menu": "토스트",
-      "major_category": "분식",
-      "middle_category": "빵",
-      "minor_category": "간식",
-      "target": "혼밥"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 128,
-      "menu": "샌드위치",
-      "major_category": "분식",
-      "middle_category": "빵",
-      "minor_category": "간식",
-      "target": "혼밥"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 129,
       "menu": "회",
       "major_category": "일식",
       "middle_category": "회",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2278615_1638842683_menu.png",
       "target": "가족"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 130,
+      "food_id": 127,
       "menu": "리조또",
       "major_category": "양식",
       "middle_category": "밥",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/124014_1638845662_menu.png",
       "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 131,
+      "food_id": 128,
       "menu": "감바스",
       "major_category": "양식",
       "middle_category": "볶음",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2647900_1638845698_menu.jpg",
       "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 132,
+      "food_id": 129,
       "menu": "쭈꾸미 볶음",
       "major_category": "한식",
       "middle_category": "볶음",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2894189_1638844038_menu.png",
       "target": "혼밥"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 133,
+      "food_id": 130,
       "menu": "전",
       "major_category": "한식",
       "middle_category": "전",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2068864_1638843362_menu.png",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 131,
+      "menu": "찜닭",
+      "major_category": "한식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2243916_1638843248_menu.png",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 132,
+      "menu": "오돌뼈",
+      "major_category": "야식",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2704252_1638844171_menu.png",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 133,
+      "menu": "쌀국수",
+      "major_category": "아시안",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2333414_1638844478_menu.png",
       "target": "친구"
     }
   },
@@ -1466,10 +1599,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 134,
-      "menu": "닭갈비",
-      "major_category": "한식",
-      "middle_category": "고기",
+      "menu": "짜조",
+      "major_category": "아시안",
+      "middle_category": "쌈",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2333417_1638844521_menu.png",
       "target": "친구"
     }
   },
@@ -1477,10 +1611,11 @@
     "model": "foods.food",
     "fields": {
       "food_id": 135,
-      "menu": "찜닭",
-      "major_category": "한식",
+      "menu": "양꼬치",
+      "major_category": "중식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2781590_1638845476_menu.jpg",
       "target": "친구"
     }
   },
@@ -1488,65 +1623,23 @@
     "model": "foods.food",
     "fields": {
       "food_id": 136,
-      "menu": "오돌뼈",
-      "major_category": "야식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 137,
-      "menu": "쌀국수",
-      "major_category": "아시안",
-      "middle_category": "면",
-      "minor_category": "식사",
-      "target": "직장동료"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 138,
-      "menu": "월남쌈",
-      "major_category": "아시안",
-      "middle_category": "쌈",
-      "minor_category": "요리",
-      "target": "가족"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 139,
-      "menu": "양꼬치",
-      "major_category": "중식",
-      "middle_category": "고기",
-      "minor_category": "요리",
-      "target": "친구"
-    }
-  },
-  {
-    "model": "foods.food",
-    "fields": {
-      "food_id": 140,
       "menu": "양갈비",
       "major_category": "중식",
       "middle_category": "고기",
       "minor_category": "요리",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2243574_1638845718_menu.jpg",
       "target": "연인"
     }
   },
   {
     "model": "foods.food",
     "fields": {
-      "food_id": 141,
+      "food_id": 137,
       "menu": "죽",
       "major_category": "한식",
       "middle_category": "죽",
       "minor_category": "식사",
+      "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/123466_1638845503_menu.jpg",
       "target": "혼밥"
     }
   }

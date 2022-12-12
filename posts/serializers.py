@@ -100,7 +100,7 @@ class CommunitySerializer(serializers.ModelSerializer):
 class CommunityCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Community
-        fields = ("title", "content")
+        fields = ("title", "content", "image")
 
 
 # 커뮤니티 게시글 댓글 등록

@@ -173,7 +173,7 @@ class CommunityLikeView(APIView):
             return Response("좋아요!", status=status.HTTP_200_OK)
 
 
-# 프로필 페이지_프로필 유저가 좋아요 등록한 커뮤니티 게시글 목록 조회
+# 프로필 페이지 _ 프로필 유저가 좋아요 등록한 커뮤니티 게시글 목록 조회
 class LikeCommunityListView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     def get(self, request, user_id):

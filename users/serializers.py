@@ -72,7 +72,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "profile_img", "nickname", "age", "gender", "follower")
+        fields = ("id", "email", "profile_img", "nickname", "age", "gender", "follower")
 
 
 # 프로필 수정

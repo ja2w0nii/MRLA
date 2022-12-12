@@ -30,5 +30,4 @@ class FoodCommentSerializer(serializers.ModelSerializer):
 class FoodCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodComment
-        fields = ("comment",)
-
+        fields = ("food_id", "menu", "image")

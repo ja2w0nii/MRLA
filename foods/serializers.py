@@ -24,10 +24,10 @@ class FilteringFoodSerializer(serializers.ModelSerializer):
 class FoodCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodComment
-        fields = ("menu", "comment", "created_at", "updated_at")
+        fields = "__all__"
 
         
 class FoodCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodComment
-        fields = ("food_id", "menu", "image")
+        fields = ("menu_id", "menu", "comment")

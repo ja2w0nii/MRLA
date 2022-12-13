@@ -11,7 +11,6 @@ urlpatterns = [
     path("follow/<int:user_id>/", views.FollowView.as_view(), name="follow_view"),
     path("api/token/", views.TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
-    path("signup/", views.UserView.as_view(), name="user_view"),
     path("kakao/login/", views.kakao_login, name="kakao_login"),
     path("kakao/callback/", views.kakao_View.as_view(), name="kakao_callback"),
     path("kakao/login/finish/", views.KakaoLogin.as_view(), name="kakao_login_todjango"),

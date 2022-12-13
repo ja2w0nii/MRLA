@@ -1,5 +1,5 @@
-from rest_framework.views import APIView
 from rest_framework import status, permissions
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 from rest_framework_simplejwt.views import TokenObtainPairView
@@ -206,7 +206,6 @@ class kakao_View(APIView):
         kakao_account = profile_json.get("kakao_account")
         print(profile_request)
         """
-
         kakao_account에서 이메일 외에
         카카오톡 프로필 이미지, 배경 이미지 url 가져올 수 있음
         print(kakao_account) 참고

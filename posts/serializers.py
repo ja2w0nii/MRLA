@@ -71,6 +71,10 @@ class CommunityCommentSerializer(serializers.ModelSerializer):
 # 커뮤니티 게시글 조회
 class CommunitySerializer(serializers.ModelSerializer):
     likes = serializers.SerializerMethodField()
+    user = serializers.SerializerMethodField()
+
+    def get_user(self, obj):
+        return obj.user.email
 
     def get_likes(self, obj):
         return obj.likes.count()

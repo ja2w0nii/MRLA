@@ -1,7 +1,8 @@
 from rest_framework import permissions, status
+from rest_framework.filters import SearchFilter
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.generics import get_object_or_404
+from rest_framework.generics import ListAPIView, get_object_or_404
 from posts.models import Service, Community, CommunityComment
 from users.models import User
 from posts.serializers import (
@@ -186,3 +187,11 @@ class LikeCommunityListView(APIView):
         community = user.community_likes.all()
         serializer = CommunitySerializer(community, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+# 커뮤니티 게시글 검색
+class CommunitySearchView(ListAPIView):
+    queryset = Community.objects.all()
+    serializer_class = CommunitySerializer
+    filter_backends = [SearchFilter]
+    search_fields = ("user__email", "title", "content")

@@ -77,7 +77,8 @@ class CommunitySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Community
-        fields = '__all__'
+        fields = "__all__"
+
 
 # # 커뮤니티 게시글 조회
 # class CommunityListSerializer(serializers.ModelSerializer):
@@ -106,4 +107,4 @@ class CommunityCreateSerializer(serializers.ModelSerializer):
 class CommunityCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = CommunityComment
-        fields = ("comment", )
+        fields = ("comment",)

@@ -88,7 +88,7 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
 class FollowSerializer(serializers.ModelSerializer):
     following = serializers.StringRelatedField(many=True)
     follower = serializers.StringRelatedField(many=True)
-    
+
     class Meta:
         model = User
         fields = ("following", "follower")

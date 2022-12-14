@@ -34,6 +34,7 @@ from django.http import HttpResponseRedirect
 class UserView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
+        print(request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({"message": "가입완료!"}, status=status.HTTP_201_CREATED)
@@ -69,7 +70,7 @@ class ProfileView(APIView):
 
 
 
-state = os.environ.get("STATE")
+# state = os.environ.get("STATE")
 
 # BASE_URL = 'http://127.0.0.1:5500/'
 # GOOGLE_CALLBACK_URI = BASE_URL + 'signlog.html'
@@ -150,7 +151,7 @@ state = os.environ.get("STATE")
 
 
 BASE_URL = 'http://127.0.0.1:5500/'
-KAKAO_CALLBACK_URI = BASE_URL + 'signlog.html'
+KAKAO_CALLBACK_URI = BASE_URL + 'templates/signin_sigup.html'
 
 def kakao_login(request):
     rest_api_key = os.environ.get('KAKAO_REST_API_KEY')
@@ -181,7 +182,7 @@ class kakao_View(APIView):
             "https://kapi.kakao.com/v2/user/me", headers={"Authorization": f"Bearer {access_token}"})
         profile_json = profile_request.json()
         kakao_account = profile_json.get('kakao_account')
-        print(profile_request)
+        print(profile_json)
         """
 
         kakao_account에서 이메일 외에
@@ -205,7 +206,7 @@ class kakao_View(APIView):
             # 기존에 Google로 가입된 유저
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "http://127.0.0.1:5500/users/kakao/login/finish/", data=data)
+                "http://127.0.0.1:8000/users/kakao/login/finish/", data=data)
             print(accept)
             accept_status = accept.status_code
             if accept_status != 200:
@@ -217,7 +218,7 @@ class kakao_View(APIView):
             # 기존에 가입된 유저가 없으면 새로 가입
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "http://127.0.0.1:5500/users/kakao/login/finish/", data=data)
+                "http://127.0.0.1:8000/users/kakao/login/finish/", data=data)
             accept_status = accept.status_code
             if accept_status != 200:
                 return JsonResponse({'err_msg': 'failed to signup'}, status=accept_status)

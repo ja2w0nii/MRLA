@@ -92,7 +92,7 @@ class CommunityView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# 커뮤니티 게시글 수정/삭제
+# 커뮤니티 게시글 상세 페이지 _ 조회/수정/삭제
 class CommunityDetailView(APIView):
     def get(self, request, community_id):
         community = get_object_or_404(Community, id=community_id)
@@ -100,9 +100,7 @@ class CommunityDetailView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def put(self, request, community_id):
-
         community = get_object_or_404(Community, id=community_id)
-
         if request.user == community.user:
             serializer = CommunityCreateSerializer(community, data=request.data)
             if serializer.is_valid():

@@ -2,7 +2,7 @@ from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
-from foods.models import Food, FoodComment
+from foods.models import Food, FoodComment, MajorCategory
 from users.models import User
 from foods.serializers import FoodSerializer, FilteringFoodSerializer, FoodCommentSerializer, FoodCommentCreateSerializer
 from foods.collaborative_filtering import collaborative_filtering
@@ -64,17 +64,19 @@ class FoodCommentView(APIView):
             return Response({"message": "삭제되었습니다."}, status=status.HTTP_204_NO_CONTENT)
         else:
             return Response({"message": "권한이 없습니다!"}, status=status.HTTP_401_UNAUTHORIZED)
-       
+                
 
 # 추천 음식 리스트 조회
 class FilteringFoodView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-    def get(self, request):
+    def get(self, request, category_id):
+        like_category = get_object_or_404(MajorCategory, id=category_id)
+
         food_list = []
         foods = collaborative_filtering(request.user.id)
         for food in foods:
             recommend_food = get_object_or_404(Food, food_id=food)
-            if recommend_food.major_category == request.user.major_category:
+            if like_category.major_category == recommend_food.major_category:
                 if len(food_list) < 7:
                     food_list.append(recommend_food)
                 else:

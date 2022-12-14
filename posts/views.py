@@ -1,7 +1,8 @@
 from rest_framework import permissions, status
+from rest_framework.filters import SearchFilter
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.generics import get_object_or_404
+from rest_framework.generics import ListAPIView, get_object_or_404
 from posts.models import Service, Community, CommunityComment
 from users.models import User
 from posts.serializers import (
@@ -160,12 +161,13 @@ class CommunityCommentDetailView(APIView):
             comment.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
         else:
-            return Response("권한이 없습니다", status = status.HTTP_403_FORBIDDEN)
-        
+            return Response("권한이 없습니다", status=status.HTTP_403_FORBIDDEN)
+
 
 # 커뮤니티 게시글 좋아요 등록/취소
 class CommunityLikeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+
     def post(self, request, community_id):
         community = get_object_or_404(Community, id=community_id)
         if request.user in community.likes.all():
@@ -179,9 +181,17 @@ class CommunityLikeView(APIView):
 # 프로필 페이지 _ 프로필 유저가 좋아요 등록한 커뮤니티 게시글 목록 조회
 class LikeCommunityListView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+
     def get(self, request, user_id):
         user = get_object_or_404(User, id=user_id)
         community = user.community_likes.all()
         serializer = CommunitySerializer(community, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+
+# 커뮤니티 게시글 검색
+class CommunitySearchView(ListAPIView):
+    queryset = Community.objects.all()
+    serializer_class = CommunitySerializer
+    filter_backends = [SearchFilter]
+    search_fields = ("user__email", "title", "content")

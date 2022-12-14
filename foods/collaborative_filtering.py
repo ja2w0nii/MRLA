@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
+
 def collaborative_filtering(id):
     likes = pd.read_csv('foods/likes.csv')
     foods = pd.read_csv('foods/foods.csv')

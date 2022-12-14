@@ -46,12 +46,15 @@ class FoodComment(models.Model):
         return str(f"{self.user} / {self.menu} / {self.comment}")
 
 
-# # 어떤 방식으로 활용할지?
-# class MajorCategories(models.Model):
-#     major_category = models.CharField(max_length=20)
+# 어떤 방식으로 활용할지?
+class MajorCategory(models.Model):
+    class Meta:
+        db_table = "majorcategory"
 
-#     def __str__(self):
-#         return self.major_category
+    major_category = models.CharField(verbose_name="메뉴 대분류", max_length=50)
+
+    def __str__(self):
+        return self.major_category
 
 # class MiddleCategories(models.Model):
 #     middle_category = models.CharField(max_length=20)

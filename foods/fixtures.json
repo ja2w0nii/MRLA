@@ -1,5 +1,54 @@
 [
   {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 1,
+      "major_category": "한식"
+    }
+  },
+  {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 2,
+      "major_category": "중식"
+    }
+  },
+  {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 3,
+      "major_category": "일식"
+    }
+  },
+  {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 4,
+      "major_category": "양식"
+    }
+  },
+  {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 5,
+      "major_category": "분식"
+    }
+  },
+  {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 6,
+      "major_category": "아시안"
+    }
+  },
+  {
+    "model": "foods.majorcategory",
+    "fields": {
+      "id": 7,
+      "major_category": "야식"
+    }
+  },
+  {
     "model": "foods.food",
     "fields": {
       "food_id": 1,

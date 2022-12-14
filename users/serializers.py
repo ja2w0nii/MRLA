@@ -10,12 +10,11 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "nickname", "password", "password_check", "major_category")
+        fields = ("email", "nickname", "password", "password_check")
         extra_kwargs = {
             "email": {"error_messages": {"required": "이메일을 입력해 주세요.", "blank": "이메일을 입력해 주세요."}},
             "nickname": {"error_messages": {"required": "닉네임을 입력해 주세요.", "blank": "닉네임을 입력해 주세요."}},
             "password": {"write_only": True, "error_messages": {"required": "비밀번호를 입력해 주세요.", "blank": "비밀번호를 입력해 주세요."}},
-            "major_category": {"error_messages": {"required": "카테고리를 입력해 주세요.", "blank": "카테고리를 입력해 주세요."}},
         }
 
     def validate(self, validated_data):
@@ -41,8 +40,7 @@ class UserSerializer(serializers.ModelSerializer):
         email = validated_data["email"]
         nickname = validated_data["nickname"]
         password = validated_data["password"]
-        major_category = validated_data["major_category"]
-        user = User(email=email, nickname=nickname, password=password, major_category=major_category)
+        user = User(email=email, nickname=nickname, password=password)
         user.set_password(password)
         user.is_active = True
         user.save()
@@ -52,8 +50,7 @@ class UserSerializer(serializers.ModelSerializer):
         email = validated_data["email"]
         nickname = validated_data["nickname"]
         password = validated_data["password"]
-        major_category = validated_data["major_category"]
-        user = User(email=email, nickname=nickname, password=password, major_category=major_category)
+        user = User(email=email, nickname=nickname, password=password)
         user.set_password(password)
         user.save()
         return user

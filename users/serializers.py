@@ -1,6 +1,7 @@
 import re
-from rest_framework import serializers
 from users.models import User
+from rest_framework import serializers
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
 # 회원 가입/수정(정규식 적용)
@@ -56,7 +57,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 # 토큰 정보 커스텀
-class TokenObtainPairSerializer:
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
@@ -66,9 +67,11 @@ class TokenObtainPairSerializer:
 
 # 프로필 조회
 class ProfileSerializer(serializers.ModelSerializer):
+    follower = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = User
-        fields = ("email", "profile_img", "nickname", "age", "gender")
+        fields = ("id", "email", "profile_img", "nickname", "age", "gender", "follower")
 
 
 # 프로필 수정
@@ -76,3 +79,13 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ("profile_img", "nickname", "age", "gender")
+
+
+# 팔로잉/팔로워 리스트 조회
+class FollowSerializer(serializers.ModelSerializer):
+    following = serializers.StringRelatedField(many=True)
+    follower = serializers.StringRelatedField(many=True)
+
+    class Meta:
+        model = User
+        fields = ("following", "follower")

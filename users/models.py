@@ -39,8 +39,12 @@ class User(AbstractBaseUser):
     updated_at = models.DateTimeField(auto_now=True)
 
     profile_img = models.ImageField(verbose_name="프로필 사진", default="profile/default.jpeg", upload_to="profile")
+
     nickname = models.CharField(verbose_name="닉네임", default="", max_length=20, unique=True, error_messages={"unique": "이미 존재하는 닉네임입니다."})
 
+
+
+    following = models.ManyToManyField("self", verbose_name="팔로잉", symmetrical=False, blank=True, related_name="follower")
 
     objects = UserManager()
 

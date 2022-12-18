@@ -21,19 +21,12 @@ class FilteringFoodSerializer(serializers.ModelSerializer):
         fields = ("food_id", "menu", "image", "major_category")
 
 
-# 메뉴 코멘트 조회
 class FoodCommentSerializer(serializers.ModelSerializer):
-    user = serializers.SerializerMethodField()
-
-    def get_user(self, obj):
-        return obj.user.nickname
-        
     class Meta:
         model = FoodComment
         fields = "__all__"
 
 
-# 메뉴 코멘트 등록
 class FoodCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodComment

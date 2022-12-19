@@ -1650,7 +1650,7 @@
       "food_id": 134,
       "menu": "짜조",
       "major_category": "아시안",
-      "middle_category": "쌈",
+      "middle_category": "고기",
       "minor_category": "요리",
       "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/2333417_1638844521_menu.png",
       "target": "친구"
@@ -1690,6 +1690,78 @@
       "minor_category": "식사",
       "image": "https://ukcooyocdlvo8099722.cdn.ntruss.com/public_data/menu_images/123466_1638845503_menu.jpg",
       "target": "혼밥"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 138,
+      "menu": "분짜",
+      "major_category": "아시안",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://static.wtable.co.kr/image/production/service/recipe/668/6c59105b-1ea9-4e6d-bdd2-e5deafe499e3.jpg",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 139,
+      "menu": "팟타이",
+      "major_category": "아시안",
+      "middle_category": "면",
+      "minor_category": "식사",
+      "image": "https://static.megamart.com/product/image/1332/13327903/13327903_1_960.jpg",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 140,
+      "menu": "춘권",
+      "major_category": "아시안",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://cdn-acemall.bizhost.kr/files/goods/2083/5a469e7f02e0c5e1ee6ca624a5a151af.jpg",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 141,
+      "menu": "반미",
+      "major_category": "아시안",
+      "middle_category": "빵",
+      "minor_category": "간식",
+      "image": "http://masism.kr/wp-content/uploads/2021/04/00-0.jpg",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 142,
+      "menu": "나시고랭",
+      "major_category": "아시안",
+      "middle_category": "밥",
+      "minor_category": "식사",
+      "image": "https://img-cf.kurly.com/shop/data/goodsview/20200910/gv00000120065_1.jpg",
+      "target": "친구"
+    }
+  },
+  {
+    "model": "foods.food",
+    "fields": {
+      "food_id": 143,
+      "menu": "월남쌈",
+      "major_category": "아시안",
+      "middle_category": "고기",
+      "minor_category": "요리",
+      "image": "https://static.wtable.co.kr/image/production/service/recipe/84/6277711a-788e-4c9b-a1b8-b9d306078dfb.jpg",
+      "target": "가족"
     }
   }
 ]

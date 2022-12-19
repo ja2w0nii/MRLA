@@ -28,7 +28,7 @@ class Community(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="community_user")
     title = models.CharField(verbose_name="커뮤니티 게시글 제목", max_length=50)
     content = models.TextField(verbose_name="커뮤니티 게시글 내용")
-    image = models.ImageField(verbose_name="커뮤니티 사진", upload_to="community")
+    image = models.ImageField(verbose_name="커뮤니티 사진", upload_to="community", default="")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

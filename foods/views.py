@@ -94,10 +94,10 @@ class LikeView(APIView):
         food = get_object_or_404(Food, food_id=food_id)
         if request.user in food.likes.all():
             food.likes.remove(request.user)
-            return Response("좋아요 취소", status=status.HTTP_200_OK)
+            return Response({"message":"좋아요 취소"}, status=status.HTTP_200_OK)
         else:
             food.likes.add(request.user)
-            return Response("좋아요!", status=status.HTTP_200_OK)
+            return Response({"message":"좋아요!"}, status=status.HTTP_200_OK)
 
 
 # 프로필 페이지 _ 프로필 유저가 좋아요 등록한 메뉴 리스트 조회

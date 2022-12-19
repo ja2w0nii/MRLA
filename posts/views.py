@@ -170,10 +170,10 @@ class CommunityLikeView(APIView):
         community = get_object_or_404(Community, id=community_id)
         if request.user in community.likes.all():
             community.likes.remove(request.user)
-            return Response("좋아요 취소", status=status.HTTP_200_OK)
+            return Response({"message":"좋아요 취소"}, status=status.HTTP_200_OK)
         else:
             community.likes.add(request.user)
-            return Response("좋아요!", status=status.HTTP_200_OK)
+            return Response({"message":"좋아요 등록 완료!"}, status=status.HTTP_200_OK)
 
 
 # 프로필 페이지 _ 프로필 유저가 좋아요 등록한 커뮤니티 게시글 목록 조회

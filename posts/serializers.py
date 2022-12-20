@@ -60,7 +60,7 @@ class CommunityCommentSerializer(serializers.ModelSerializer):
 
     def get_user_nickname(self, obj):
         return obj.user.nickname
-    
+
     def get_user_id(self, obj):
         return obj.user.id
 
@@ -69,14 +69,13 @@ class CommunityCommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CommunityComment
-        fields = ("id", "user_id", "user_nickname", "community_id",
-                  "comment", "created_at", "updated_at")
+        fields = ("id", "user_id", "user_nickname", "community_id", "comment", "created_at", "updated_at")
 
 
 # 커뮤니티 게시글 조회
 class CommunitySerializer(serializers.ModelSerializer):
     user_nickname = serializers.SerializerMethodField()
-    
+
     def get_user_nickname(self, obj):
         return obj.user.nickname
 

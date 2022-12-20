@@ -54,24 +54,32 @@ class ServiceCommentCreateSerializer(serializers.ModelSerializer):
 
 # 커뮤니티 게시글 댓글 조회
 class CommunityCommentSerializer(serializers.ModelSerializer):
-    user = serializers.SerializerMethodField()
+    user_nickname = serializers.SerializerMethodField()
+    user_id = serializers.SerializerMethodField()
     community_id = serializers.SerializerMethodField()
 
-    def get_user(self, obj):
+    def get_user_nickname(self, obj):
         return obj.user.nickname
+    
+    def get_user_id(self, obj):
+        return obj.user.id
 
     def get_community_id(self, obj):
         return obj.community.id
 
     class Meta:
         model = CommunityComment
-        fields = ("id", "user", "community_id", "comment", "created_at", "updated_at")
+        fields = ("id", "user_id", "user_nickname", "community_id",
+                  "comment", "created_at", "updated_at")
 
 
 # 커뮤니티 게시글 조회
 class CommunitySerializer(serializers.ModelSerializer):
-    user = serializers.StringRelatedField()
+    user_nickname = serializers.SerializerMethodField()
     
+    def get_user_nickname(self, obj):
+        return obj.user.nickname
+
     class Meta:
         model = Community
         fields = "__all__"

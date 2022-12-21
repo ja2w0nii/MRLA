@@ -60,7 +60,7 @@ class UserSerializer(serializers.ModelSerializer):
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
-        token = super().get_token(user)
+        token = super().get_token(user) #가입 시 이메일, 패스워드 구분해야함   
         token["email"] = user.email
         return token
 
@@ -71,14 +71,14 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("id", "email", "profile_img", "nickname", "age", "gender", "follower")
+        fields = ("id", "email", "profile_img", "nickname",  "follower")
 
 
 # 프로필 수정
 class ProfileUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("profile_img", "nickname", "age", "gender")
+        fields = ("profile_img", "nickname", )
 
 
 # 팔로잉/팔로워 리스트 조회

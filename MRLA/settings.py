@@ -187,9 +187,9 @@ SIMPLE_JWT = {
 SITE_ID = 1
 AUTH_USER_MODEL = "users.User"
 
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None # username 필드 사용 x
-ACCOUNT_EMAIL_REQUIRED = True            # email 필드 사용 o
-ACCOUNT_USERNAME_REQUIRED = False        # username 필드 사용 x
+ACCOUNT_USER_MODEL_USERNAME_FIELD = "nickname" 
+ACCOUNT_EMAIL_REQUIRED = True            
+ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 
 

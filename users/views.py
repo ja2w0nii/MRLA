@@ -91,8 +91,8 @@ class FollowView(APIView):
 
 
 
-BASE_URL = 'http://127.0.0.1:5500/'
-KAKAO_CALLBACK_URI = BASE_URL + 'templates/signin_signup.html'
+BASE_URL = 'https://mechurial.mrla.tk/'
+KAKAO_CALLBACK_URI = BASE_URL + 'signin_signup.html'
 
 def kakao_login(request):
     rest_api_key = os.environ.get("KAKAO_REST_API_KEY")
@@ -149,7 +149,7 @@ class kakao_View(APIView):
 
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "http://127.0.0.1:8000/users/kakao/login/finish/", data=data)
+                "https://mrla.tk/users/kakao/login/finish/", data=data)
 
             print(accept)
             accept_status = accept.status_code
@@ -163,7 +163,7 @@ class kakao_View(APIView):
 
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "http://127.0.0.1:8000/users/kakao/login/finish/", data=data)
+                "https://mrla.tk/users/kakao/login/finish/", data=data)
 
             accept_status = accept.status_code
             if accept_status != 200:

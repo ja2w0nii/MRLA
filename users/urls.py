@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from users import views
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
@@ -14,6 +14,7 @@ urlpatterns = [
     path("kakao/login/", views.kakao_login, name="kakao_login"),
     path("kakao/callback/", views.kakao_View.as_view(), name="kakao_callback"),
     path("kakao/login/finish/", views.KakaoLogin.as_view(), name="kakao_login_todjango"),
+    path('', include('allauth.urls')),
     # path('google/login/', views.google_login, name='google_login'),
     # path('google/callback/', views.google_callback, name='google_callback'),
     # path('google/login/finish/', views.GoogleLogin.as_view(), name='google_login_todjango'),

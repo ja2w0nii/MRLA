@@ -149,7 +149,7 @@ class kakao_View(APIView):
 
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "https://mrla.tk/users/kakao/login/finish/", data=data)
+                "https://www.mrla.tk/users/kakao/login/finish/", data=data)
 
             print(accept)
             accept_status = accept.status_code
@@ -163,7 +163,7 @@ class kakao_View(APIView):
 
             data = {'access_token': access_token, 'code': code}
             accept = requests.post(
-                "https://mrla.tk/users/kakao/login/finish/", data=data)
+                "https://www.mrla.tk/users/kakao/login/finish/", data=data)
 
             accept_status = accept.status_code
             if accept_status != 200:

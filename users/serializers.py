@@ -60,10 +60,10 @@ class UserSerializer(serializers.ModelSerializer):
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
-        token = super().get_token(user)
+        token = super().get_token(user) #가입 시 이메일, 패스워드 구분해야함   
         token["email"] = user.email
         return token
-
+        
 
 # 프로필 조회
 class ProfileSerializer(serializers.ModelSerializer):

@@ -23,9 +23,9 @@ class FilteringFoodSerializer(serializers.ModelSerializer):
 
 # 메뉴 코멘트 조회
 class FoodCommentSerializer(serializers.ModelSerializer):
-    user = serializers.SerializerMethodField()
-
-    def get_user(self, obj):
+    user_nickname = serializers.SerializerMethodField()
+    
+    def get_user_nickname(self, obj):
         return obj.user.nickname
         
     class Meta:

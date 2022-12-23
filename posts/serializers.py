@@ -7,7 +7,7 @@ class ServiceSerializer(serializers.ModelSerializer):
     user = serializers.SerializerMethodField()
 
     def get_user(self, obj):
-        return obj.user.email
+        return obj.user.nickname
 
     class Meta:
         model = Service

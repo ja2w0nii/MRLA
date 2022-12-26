@@ -126,7 +126,7 @@ class CommunityDetailView(APIView):
 class CommunityCommentView(APIView):
     def get(self, request, community_id):
         community = Community.objects.get(id=community_id)
-        comments = community.comment_set.all().order_by("-id")
+        comments = community.comment_set.all()
         serializer = CommunityCommentSerializer(comments, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

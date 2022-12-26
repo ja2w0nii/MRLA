@@ -85,4 +85,4 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
 class FollowSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("id", "email", "nickname")
+        fields = ("id", "email", "nickname", "profile_img")

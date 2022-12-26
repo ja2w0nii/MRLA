@@ -1,7 +1,8 @@
 from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.generics import get_object_or_404
+from rest_framework.filters import SearchFilter
+from rest_framework.generics import get_object_or_404, ListAPIView
 from foods.models import Food, FoodComment, MajorCategory
 from users.models import User
 from foods.serializers import FoodSerializer, FilteringFoodSerializer, FoodCommentSerializer, FoodCommentCreateSerializer
@@ -109,3 +110,10 @@ class LikeFoodListView(APIView):
         foods = user.food_likes.all()
         serializer = FilteringFoodSerializer(foods, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+# 커뮤니티 게시글 검색
+class FoodSearchView(ListAPIView):
+    queryset = Food.objects.all()
+    serializer_class = FoodSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ("menu")

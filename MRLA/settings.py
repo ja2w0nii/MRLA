@@ -1,5 +1,5 @@
 from pathlib import Path
-from datetime import timedelta                                                            
+from datetime import timedelta
 import os
 import environ
 
@@ -65,7 +65,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-"django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -110,7 +110,6 @@ else:
         }
     }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -128,7 +127,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -164,18 +162,19 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ORIGIN_ALLOW_ALL = True
 
 # CORS 허용 목록에 ec2 ip를 추가합니다.
-CORS_ORIGIN_WHITELIST = ['https://www.mrla.tk', 'https://mrla.tk', 'https://www.mrla.tk']
+CORS_ORIGIN_WHITELIST = ['https://www.mrla.tk', 'https://mrla.tk', 'https://mechurial.mrla.tk', 'https://www.mechurial.mrla.tk']
 CORS_ALLOW_CREDENTIALS = True
+
 
 # CSRF 허용 목록을 CORS와 동일하게 설정합니다.
 CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
 
+
 CSRF_TRUSTED_ORIGINS = ['https://www.mrla.tk']
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=720),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
-    "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": False,
     "ALGORITHM": "HS256",
@@ -201,8 +200,8 @@ SIMPLE_JWT = {
 SITE_ID = 1
 AUTH_USER_MODEL = "users.User"
 
-ACCOUNT_USER_MODEL_USERNAME_FIELD = "nickname" 
-ACCOUNT_EMAIL_REQUIRED = True            
+ACCOUNT_USER_MODEL_USERNAME_FIELD = "nickname"
+ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 

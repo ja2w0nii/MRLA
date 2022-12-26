@@ -11,7 +11,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Service
-        fields = ("id", "user", "title", "created_at")
+        fields = ("id", "user", "title", "created_at", "updated_at")
 
 
 # 고객센터 게시글 등록
@@ -30,7 +30,7 @@ class ServiceDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Service
-        fields = ("user", "title", "content", "created_at")
+        fields = ("user", "title", "content", "created_at", "updated_at")
 
 
 # 고객센터 게시글 디테일 댓글 조회
@@ -104,7 +104,7 @@ class CommunitySerializer(serializers.ModelSerializer):
 class CommunityCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Community
-        fields = ("title", "content", "image")
+        fields = ("title", "content", "image", "location")
 
 
 # 커뮤니티 게시글 댓글 등록

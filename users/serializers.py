@@ -71,7 +71,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("id", "email", "profile_img", "nickname",  "follower")
+        fields = ("id", "email", "profile_img", "nickname", "follower")
 
 
 # 프로필 수정
@@ -81,11 +81,8 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
         fields = ("profile_img", "nickname")
 
 
-# 팔로잉/팔로워 리스트 조회
+# 팔로잉/팔로워 목록 조회
 class FollowSerializer(serializers.ModelSerializer):
-    following = serializers.StringRelatedField(many=True)
-    follower = serializers.StringRelatedField(many=True)
-    
     class Meta:
         model = User
-        fields = ("following", "follower")
+        fields = ("id", "email", "nickname")

@@ -70,14 +70,9 @@ class ProfileView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# 팔로잉/팔로워 목록 조회 & 팔로우 등록/취소
+# 팔로우 등록/취소
 class FollowView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request, user_id):
-        following = get_object_or_404(User, id=user_id)
-        serializer = FollowSerializer(following)
-        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, user_id):
         user = get_object_or_404(User, id=user_id)
@@ -87,8 +82,28 @@ class FollowView(APIView):
         else:
             user.follower.add(request.user)
             return Response({"message": "팔로우 완료"}, status=status.HTTP_200_OK)
+        
 
+# 팔로잉 목록 조회
+class FollowingView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
 
+    def get(self, request, user_id):
+        user = get_object_or_404(User, id=user_id)
+        following = user.following.all()
+        serializer = FollowSerializer(following, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+# 팔로워 목록 조회
+class FollowerView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, user_id):
+        user = get_object_or_404(User, id=user_id)
+        follower = user.follower.all()
+        serializer = FollowSerializer(follower, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 BASE_URL = 'https://mechurial.mrla.tk/'

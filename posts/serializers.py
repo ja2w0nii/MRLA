@@ -7,7 +7,7 @@ class ServiceSerializer(serializers.ModelSerializer):
     user = serializers.SerializerMethodField()
 
     def get_user(self, obj):
-        return obj.user.email
+        return obj.user.nickname
 
     class Meta:
         model = Service
@@ -104,7 +104,7 @@ class CommunitySerializer(serializers.ModelSerializer):
 class CommunityCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Community
-        fields = ("title", "content", "image")
+        fields = ("title", "content", "image", "location")
 
 
 # 커뮤니티 게시글 댓글 등록

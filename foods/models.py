@@ -46,7 +46,6 @@ class FoodComment(models.Model):
         return str(f"{self.user} / {self.menu} / {self.comment}")
 
 
-# 어떤 방식으로 활용할지?
 class MajorCategory(models.Model):
     class Meta:
         db_table = "majorcategory"
@@ -55,18 +54,3 @@ class MajorCategory(models.Model):
 
     def __str__(self):
         return self.major_category
-
-# class MiddleCategories(models.Model):
-#     middle_category = models.CharField(max_length=20)
-#     major_category = models.ForeignKey("MajorCategories", on_delete=models.CASCADE, default="")
-
-#     def __str__(self):
-#         return self.middle_category
-
-# class MinorCategories(models.Model):
-#     minor_category = models.CharField(max_length=20)
-#     middle_category = models.ForeignKey("MiddleCategories", on_delete=models.CASCADE, default="")
-#     major_category = models.ForeignKey("MajorCategories", on_delete=models.CASCADE, default="")
-
-#     def __str__(self):
-#         return self.minor_category

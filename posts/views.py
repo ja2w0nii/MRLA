@@ -185,7 +185,7 @@ class LikeCommunityListView(APIView):
         community = user.community_likes.all()
         serializer = CommunitySerializer(community, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-    
+
 
 # 프로필 페이지 _ 프로필 유저가 작성한 커뮤니티 게시글 목록 조회
 class MyCommunityListView(APIView):

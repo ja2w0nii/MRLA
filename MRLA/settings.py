@@ -8,7 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['backend', ]
+ALLOWED_HOSTS = [
+    "backend",
+]
 
 # .env
 env = environ.Env(DEBUG=(bool, False))
@@ -26,21 +28,20 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'django.contrib.sites',
+    "django.contrib.sites",
     "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt",
     "users",
     "posts",
-    'dj_rest_auth',
-    'dj_rest_auth.registration',
-    'rest_framework_simplejwt.token_blacklist',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.kakao',
-    'rest_framework.authtoken',
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    "rest_framework_simplejwt.token_blacklist",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.kakao",
+    "rest_framework.authtoken",
     "foods",
 ]
 
@@ -52,7 +53,7 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
         "rest_framework.authentication.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication",
-],
+    ],
     "DEFAULT_PARSER_CLASSES": [  # request.data 속성에 액세스 할 때 사용되는 파서 지정
         "rest_framework.parsers.JSONParser",
         "rest_framework.parsers.FormParser",
@@ -86,27 +87,28 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
         },
-    },]
+    },
+]
 
-POSTGRES_DB = os.environ.get('POSTGRES_DB', '')
+POSTGRES_DB = os.environ.get("POSTGRES_DB", "")
 if POSTGRES_DB:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': POSTGRES_DB,
-            'USER': os.environ.get('POSTGRES_USER', ''),
-            'PASSWORD': os.environ.get('POSTGRES_PASSWORD', ''),
-            'HOST': os.environ.get('POSTGRES_HOST', ''),
-            'PORT': os.environ.get('POSTGRES_PORT', ''),
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": POSTGRES_DB,
+            "USER": os.environ.get("POSTGRES_USER", ""),
+            "PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
+            "HOST": os.environ.get("POSTGRES_HOST", ""),
+            "PORT": os.environ.get("POSTGRES_PORT", ""),
         }
     }
 
 # 환경변수가 존재하지 않을 경우 sqlite3을 사용합니다.
 else:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
     }
 
@@ -152,17 +154,10 @@ MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-# CORS 설정
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5500",
-#     "http://127.0.0.1:5500",
-# ]
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 # CORS 허용 목록에 ec2 ip를 추가합니다.
-CORS_ORIGIN_WHITELIST = ['https://www.mrla.tk', 'https://mrla.tk', 'https://mechurial.mrla.tk', 'https://www.mechurial.mrla.tk']
+CORS_ORIGIN_WHITELIST = ["https://www.mrla.tk", "https://mrla.tk", "https://mechurial.mrla.tk", "https://www.mechurial.mrla.tk"]
 CORS_ALLOW_CREDENTIALS = True
 
 
@@ -170,7 +165,7 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
 
 
-CSRF_TRUSTED_ORIGINS = ['https://www.mrla.tk']
+CSRF_TRUSTED_ORIGINS = ["https://www.mrla.tk"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
@@ -203,32 +198,31 @@ AUTH_USER_MODEL = "users.User"
 ACCOUNT_USER_MODEL_USERNAME_FIELD = "nickname"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-EMAIL_HOST = 'smtp.gmail.com' # 메일 호스트 서버
+EMAIL_HOST = "smtp.gmail.com"  # 메일 호스트 서버
 
-EMAIL_PORT = '587' # gmail과 통신하는 포트
+EMAIL_PORT = "587"  # gmail과 통신하는 포트
 
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') # 발신할 이메일
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")  # 발신할 이메일
 
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD') # 발신할 메일의 비밀번호
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")  # 발신할 메일의 비밀번호
 
-EMAIL_USE_TLS = True # TLS 보안 방법
+EMAIL_USE_TLS = True  # TLS 보안 방법
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-URL_FRONT = 'https://mrla.tk/' # 공개적인 웹페이지가 있다면 등록
+URL_FRONT = "https://mrla.tk/"  # 공개적인 웹페이지가 있다면 등록
 
-ACCOUNT_CONFIRM_EMAIL_ON_GET = True # 유저가 받은 링크를 클릭하면 회원가입 완료되게끔
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True  # 유저가 받은 링크를 클릭하면 회원가입 완료되게끔
 ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-# ACCOUNT_EMAIL_VERIFICATION = "none"
 
-EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/' # 사이트와 관련한 자동응답을 받을 이메일 주소,'webmaster@localhost'
+EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = "/"  # 사이트와 관련한 자동응답을 받을 이메일 주소,'webmaster@localhost'
 
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 
@@ -236,7 +230,7 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_EMAIL_SUBJECT_PREFIX = "메추리알"
 
 REST_USE_JWT = True
-AWS_DEFAULT_ACL='public-read'
+AWS_DEFAULT_ACL = "public-read"
 
 
 MAX_UPLOAD_SIZE = 52428800
@@ -244,4 +238,4 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 52428800
 
-ALLOWED_HOSTS=['*']
+ALLOWED_HOSTS = ["*"]

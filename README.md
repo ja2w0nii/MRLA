@@ -7,7 +7,7 @@
 메뉴뿐만 아니라 함께 식사하는 사람들 등 뭘 먹을지 고민하는 데에도 고려할 점이 많죠.</br>
 서비스 메추리알은 직관적이고 쉽게 메뉴를 고를 수 있게 도와드립니다!</br>
  - 한식, 양식, 아시안... 등 카테고리에 맞춰 메뉴를 추천해드려요.
- - 추천받은 메뉴를 파는 근처 식당을 바로바로 찾아볼 수 있어요.
+ - 추천받은 메뉴를 파는 근처 식당을 바로바로 확인할 수 있어요.
  - 카테고리에 맞는 음식점의 위치를 바로 확인할 수 있어요. (+카페도 볼 수 있어요!)
  - 커뮤니티에서 먹고 싶은 음식이나 맛집에 대한 정보를 나눌 수 있어요.
  - 맛집을 많이 아는 유저를 발견했나요? 팔로우하고 정보를 교환해요.
@@ -28,12 +28,14 @@
 </br>
 
 ## 📚 Project Structure
-### STACKS
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Djangorestframework-092E20?style=for-the-badge&logo=Django&logoColor=white"> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+
+<img width="637" alt="스크린샷 2022-12-28 오후 8 32 25" src="https://user-images.githubusercontent.com/18550082/209807208-de18c115-a730-4597-ad19-74d38c0dd8ff.png">
 
 </br>
 
-<img width="637" alt="스크린샷 2022-12-28 오후 8 32 25" src="https://user-images.githubusercontent.com/18550082/209807208-de18c115-a730-4597-ad19-74d38c0dd8ff.png">
+### 🛠 Stacks
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white"> <img src="https://img.shields.io/badge/Django_rest_framework-A50E15?style=for-the-badge&logo=Django&logoColor=white"> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=Ubuntu&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> <img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=white"> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=PostgreSQL&logoColor=white"> <img src="https://img.shields.io/badge/Amazon_EC2-ff9900?style=for-the-badge&logo=AmazonEC2&logoColor=white"> <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=AmazonS3&logoColor=white"> <img src="https://img.shields.io/badge/Amazon_Cloudfront-569A31?style=for-the-badge&logo=AmazonAws&logoColor=white"> <img src="https://img.shields.io/badge/Amazon_Route53-232f3e?style=for-the-badge&logo=AmazonAws&logoColor=white">
 
 </br>
 
@@ -104,7 +106,7 @@
 
 ### 메뉴 추천 시스템 기능
 
-- 선호 메뉴를 통한 유사도(Cosine Similarity)를 이용한 추천 시스템
+- 선호 메뉴를 통한 유사도(Cosain Similarity)를 이용한 추천 시스템
 - 카테고리 별로 새로운 메뉴를 추천
 - 네비바 상단에서 메뉴 검색 가능
 
@@ -224,3 +226,52 @@
 
 ## 🛠 Trouble Shooting
 
+<details>
+<summary>🐛 데이터를 제대로 보내지 못 함.</summary>
+<div>
+</br>
+- 상황: 커뮤니티 게시글 검색 기능 추가 진행 중 user.email을 받아오지 못 하는 에러 발생. Community 모델에서 User 모델을 FK로 연결한 상태, search_fields에서 user를 받아오지 못함.
+</br>
+- 해결: </br>
+<img width="665" alt="스크린샷 2022-12-28 오후 10 49 14" src="https://user-images.githubusercontent.com/18550082/209823040-66e8ab3d-90ef-4613-8d3e-327e8753b7fe.png">
+
+</div>
+</details>
+
+
+<details>
+<summary>🐛 입력값이 수정이 되지 않음.</summary>
+<div>
+</br>
+- 상황: 프로필 수정 시 닉네임 외의 정보를 수정할 때 닉네임을 입력하지 않으면 수정이 이루어지지 않음.
+</br>
+- 해결: 이를 해결하기 위하여 default="" 를 지정해주어 정보를 입려하지 않고도 수정 완료 시 기존 정보가 유지되게 조치.</br>
+<img width="824" alt="스크린샷 2022-12-28 오후 11 01 23" src="https://user-images.githubusercontent.com/18550082/209823581-c7d37b1f-b2d2-4b2a-908f-a6a4dcdf5f15.png">
+
+</div>
+</details>
+
+
+<details>
+<summary>🐛 사용자 인증 "Unauthorized" 에러</summary>
+<div>
+</br>
+- 상황: token 인증 과정에서 정보를 확읺날 수 없는 에러 발생.
+</br>
+- 해결: </br>
+<img width="682" alt="스크린샷 2022-12-28 오후 11 03 35" src="https://user-images.githubusercontent.com/18550082/209823860-6ab49a47-f09c-457a-9ccd-8dd14ee44a4b.png">
+
+</div>
+</details>
+
+<details>
+<summary>🐛 2.5MB 초과 이미지 업로드 불가</summary>
+<div>
+</br>
+- 상황: 서버 작동 후 게시글 모델을 통해 2.5MB를 초과하는 용량의 이미지를 업로드할 시 문제 발생. django에서 이미 2.5MB의 제한을 두고 있었음.</br>
+그러나 nginx 설정도 따로 해주어야 정상적으로 이미지 업로드가 가능.</br>
+- 해결: django settings.py 에서는 DATA_UPLOAD_MAX_MEMORY_SIZE, FILE_UPLOAD_MAX_MEMORY_SIZE, MAX_UPLOAD_SIZE 를 설정,</br> 
+nginx에는 client_max_body_size 설정으로 해결.
+</br>
+</div>
+</details>

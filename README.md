@@ -29,7 +29,7 @@
 
 ## 📚 Project Structure
 ### STACKS
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white"> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Djangorestframework-092E20?style=for-the-badge&logo=Django&logoColor=white"> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
 
 </br>
 
@@ -104,7 +104,7 @@
 
 ### 메뉴 추천 시스템 기능
 
-- 선호 메뉴를 통한 유사도(Cosain Similarity)를 이용한 추천 시스템
+- 선호 메뉴를 통한 유사도(Cosine Similarity)를 이용한 추천 시스템
 - 카테고리 별로 새로운 메뉴를 추천
 - 네비바 상단에서 메뉴 검색 가능
 

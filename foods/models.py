@@ -54,3 +54,4 @@ class MajorCategory(models.Model):
 
     def __str__(self):
         return self.major_category
+

@@ -84,22 +84,6 @@ class CommunitySerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-# # 커뮤니티 게시글 조회
-# class CommunityListSerializer(serializers.ModelSerializer):
-#     user = serializers.SerializerMethodField()
-#     comment_set = serializers.SerializerMethodField()
-
-#     def get_user(self, obj):
-#         return obj.user.email
-
-#     def get_comment_set(self, obj):
-#         return obj.comment_set.count()
-
-#     class Meta:
-#         model = Community
-#         fields = ("pk", "title", "image", "updated_at", "user", "comment_set")
-
-
 # 커뮤니티 게시글 등록
 class CommunityCreateSerializer(serializers.ModelSerializer):
     class Meta:

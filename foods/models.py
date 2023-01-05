@@ -46,7 +46,6 @@ class FoodComment(models.Model):
         return str(f"{self.user} / {self.menu} / {self.comment}")
 
 
-# 어떤 방식으로 활용할지?
 class MajorCategory(models.Model):
     class Meta:
         db_table = "majorcategory"
@@ -55,5 +54,4 @@ class MajorCategory(models.Model):
 
     def __str__(self):
         return self.major_category
-
 

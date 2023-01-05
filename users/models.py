@@ -3,24 +3,27 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, nickname, password=None,):
+    def create_user(
+        self,
+        email,
+        nickname,
+        password=None,
+    ):
         if not email:
             raise ValueError("이메일을 작성해 주세요.")
 
-        user = self.model(
-            email=self.normalize_email(email),
-            nickname=nickname
-        )
+        user = self.model(email=self.normalize_email(email), nickname=nickname)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, nickname, password=None,):
-        user = self.create_user(
-            email,
-            password=password,
-            nickname=nickname
-        )
+    def create_superuser(
+        self,
+        email,
+        nickname,
+        password=None,
+    ):
+        user = self.create_user(email, password=password, nickname=nickname)
         user.is_admin = True
         user.save(using=self._db)
         return user
@@ -40,8 +43,6 @@ class User(AbstractBaseUser):
 
     profile_img = models.ImageField(verbose_name="프로필 사진", default="profile/default.jpeg", upload_to="profile")
     nickname = models.CharField(verbose_name="닉네임", default="", max_length=20, unique=True, error_messages={"unique": "이미 존재하는 닉네임입니다."})
-    age = models.IntegerField(verbose_name="나이", null=True)
-    gender = models.BooleanField(verbose_name="성별", null=True)
 
     following = models.ManyToManyField("self", verbose_name="팔로잉", symmetrical=False, blank=True, related_name="follower")
 
@@ -62,4 +63,3 @@ class User(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
-

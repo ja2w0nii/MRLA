@@ -70,14 +70,9 @@ class ProfileView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# 팔로잉/팔로워 목록 조회 & 팔로우 등록/취소
+# 팔로우 등록/취소
 class FollowView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request, user_id):
-        following = get_object_or_404(User, id=user_id)
-        serializer = FollowSerializer(following)
-        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, user_id):
         user = get_object_or_404(User, id=user_id)
@@ -89,10 +84,31 @@ class FollowView(APIView):
             return Response({"message": "팔로우 완료"}, status=status.HTTP_200_OK)
 
 
+# 팔로잉 목록 조회
+class FollowingView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, user_id):
+        user = get_object_or_404(User, id=user_id)
+        following = user.following.all()
+        serializer = FollowSerializer(following, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-BASE_URL = 'https://mechurial.mrla.tk/'
-KAKAO_CALLBACK_URI = BASE_URL + 'signin_signup.html'
+# 팔로워 목록 조회
+class FollowerView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, user_id):
+        user = get_object_or_404(User, id=user_id)
+        follower = user.follower.all()
+        serializer = FollowSerializer(follower, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+BASE_URL = "https://mechurial.mrla.tk/"
+KAKAO_CALLBACK_URI = BASE_URL + "signin_signup.html"
+
 
 def kakao_login(request):
     rest_api_key = os.environ.get("KAKAO_REST_API_KEY")
@@ -123,7 +139,7 @@ class kakao_View(APIView):
         profile_request = requests.post("https://kapi.kakao.com/v2/user/me", headers={"Authorization": f"Bearer {access_token}"})
         profile_json = profile_request.json()
 
-        kakao_account = profile_json.get('kakao_account')
+        kakao_account = profile_json.get("kakao_account")
         print(profile_json)
 
         """
@@ -147,9 +163,8 @@ class kakao_View(APIView):
                 return JsonResponse({"err_msg": "no matching social type"}, status=status.HTTP_400_BAD_REQUEST)
             # 기존에 Google로 가입된 유저
 
-            data = {'access_token': access_token, 'code': code}
-            accept = requests.post(
-                "https://www.mrla.tk/users/kakao/login/finish/", data=data)
+            data = {"access_token": access_token, "code": code}
+            accept = requests.post("https://www.mrla.tk/users/kakao/login/finish/", data=data)
 
             print(accept)
             accept_status = accept.status_code
@@ -161,9 +176,8 @@ class kakao_View(APIView):
         except User.DoesNotExist:
             # 기존에 가입된 유저가 없으면 새로 가입
 
-            data = {'access_token': access_token, 'code': code}
-            accept = requests.post(
-                "https://www.mrla.tk/users/kakao/login/finish/", data=data)
+            data = {"access_token": access_token, "code": code}
+            accept = requests.post("https://www.mrla.tk/users/kakao/login/finish/", data=data)
 
             accept_status = accept.status_code
             if accept_status != 200:
@@ -183,8 +197,4 @@ class KakaoLogin(SocialLoginView):
 def index(request):
     print(request.user.is_authenticated)
 
-    return render(request, 'coplate/index.html')
-
-
-
-
+    return render(request, "coplate/index.html")

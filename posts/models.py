@@ -31,8 +31,8 @@ class Community(models.Model):
     image = models.ImageField(verbose_name="커뮤니티 사진", upload_to="community", default="")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
     likes = models.ManyToManyField(User, verbose_name="좋아요 커뮤니티 게시글", related_name="community_likes", blank=True)
+    location = models.CharField(verbose_name="커뮤니티 게시글 사진 위치", max_length=50, blank=True)
 
     def __str__(self):
         return str(f"{self.user} / {self.title}")

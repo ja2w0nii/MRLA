@@ -4,8 +4,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 def collaborative_filtering(id):
-    likes = pd.read_csv('foods/likes.csv')
-    foods = pd.read_csv('foods/foods.csv')
+    likes = pd.read_csv("foods/likes.csv")
+    foods = pd.read_csv("foods/foods.csv")
 
     pd.set_option("display.max_columns", 10)
     pd.set_option("display.width", 300)

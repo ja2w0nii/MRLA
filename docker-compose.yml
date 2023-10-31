@@ -10,7 +10,7 @@ services:
     container_name: postgres
     image: postgres:14.5-alpine
     env_file:
-      - ./.env #기존의 .env에 내용 추가
+      - ./.env
     volumes:
       - postgres:/var/lib/postgresql/data/
     environment:
@@ -25,12 +25,12 @@ services:
     entrypoint: sh -c "python manage.py collectstatic --no-input && python manage.py makemigrations && python manage.py migrate && python manage.py loaddata foods/fixtures && gunicorn MRLA.wsgi --workers=5 -b 0.0.0.0:8000"
 
     volumes:
-      - ./backend/django/:/app/ #프로젝트 파일들을 backend/django 안에 넣음.
+      - ./backend/django/:/app/
       - /etc/localtime:/etc/localtime:ro
-      - django_media:/app/media/ # nginx에서 media를 사용할 수 있도록 volume을 지정해줍니다.
-      - django_static:/app/static/ # nginx에서 static을 사용할 수 있도록 volume을 지정해줍니다.
+      - django_media:/app/media/ # nginx에서 media를 사용할 수 있도록 volume 지정
+      - django_static:/app/static/ # nginx에서 static을 사용할 수 있도록 volume 지정
 
-    environment: # django에서 사용할 설정들을 지정해줍니다.
+    environment:
       - DEBUG
       - POSTGRES_DB
       - POSTGRES_USER
@@ -49,7 +49,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - django_media:/media/ # django의 media를 사용할 수 있도록 volume을 지정해줍니다.
-      - django_static:/static/ # django의 static 사용할 수 있도록 volume을 지정해줍니다.
+      - django_media:/media/ # django의 media를 사용할 수 있도록 volume 지정
+      - django_static:/static/ # django의 static 사용할 수 있도록 volume 지정
     depends_on:
       - backend

@@ -3,8 +3,8 @@ from rest_framework.filters import SearchFilter
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView, get_object_or_404
-from posts.models import Service, Community, CommunityComment
 from users.models import User
+from posts.models import Service, Community, CommunityComment
 from posts.serializers import (
     ServiceSerializer,
     ServiceCreateSerializer,

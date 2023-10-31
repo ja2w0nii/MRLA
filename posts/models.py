@@ -1,6 +1,6 @@
 from django.db import models
-from users.models import User
 from django.urls import reverse
+from users.models import User
 
 
 class Service(models.Model):

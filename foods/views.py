@@ -3,11 +3,15 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter
 from rest_framework.generics import get_object_or_404, ListAPIView
+from foods.collaborative_filtering import collaborative_filtering
 from foods.models import Food, FoodComment, MajorCategory
 from users.models import User
-from foods.serializers import FoodSerializer, FilteringFoodSerializer, FoodCommentSerializer, FoodCommentCreateSerializer
-from foods.collaborative_filtering import collaborative_filtering
-from users.models import User
+from foods.serializers import (
+    FoodSerializer,
+    FilteringFoodSerializer,
+    FoodCommentSerializer,
+    FoodCommentCreateSerializer,
+)
 
 
 # 전체 메뉴 리스트 조회
